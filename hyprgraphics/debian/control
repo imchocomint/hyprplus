@@ -1,0 +1,35 @@
+Source: hyprgraphics
+Section: main
+Priority: optional
+Maintainer: imchocomint <tranthienminh2008@gmail.com>
+Standards-Version: 4.6.1
+Build-Depends: debhelper-compat (= 13),
+               build-essential,
+               cmake-extras,
+               cmake,
+               libpixman-1-dev,
+               libjxl-dev,
+               libmagic-dev,
+               libcairo2-dev,
+               libpixman-1-dev,
+               libwebp-dev,
+               libjpeg-dev,
+               libspng-dev,
+Rules-Requires-Root: no
+
+Package: libhyprgraphics
+Architecture: linux-any
+Depends:
+         ${shlibs:Depends},
+         ${misc:Depends},
+Provides: hyprgraphics (= ${binary:Version}),
+Description: Hyprland graphics library used across the ecosystem.
+
+Package: libhyprgraphics-dev
+Architecture: linux-any
+Depends:
+         ${shlibs:Depends},
+         ${misc:Depends},
+         libhyprgraphics (= ${binary:Version}),
+Provides: hyprgraphics-dev (= ${binary:Version}),
+Description: Development files for the Hyprland graphics library used across the ecosystem.

@@ -2,7 +2,7 @@
 
 set -e
 
-VERSION="0.8.0"
+VERSION="0.1.4"
 function check_architecture() {
     local arch=$(uname -m)
     if [[ "$arch" == "x86_64" ]]; then
@@ -28,15 +28,15 @@ source ./build-config.sh
 echo "$PIKA_BUILD_ARCH" > pika-build-arch
 
 # Clone Upstream
-git clone --recurse-submodules https://github.com/hyprwm/hyprutils
-cp -rvf ./debian ./hyprutils/
-cd ./hyprutils
+git clone --recurse-submodules https://github.com/hyprwm/hyprgraphics -b v"$VERSION"
+cp -rvf ./debian ./hyprgraphics/
+cd ./hyprgraphics
 
 # Get build deps
 apt-get build-dep ./ -y
 
 # Build package
-LOGNAME=root dh_make --createorig -y -l -p hyprutils_"$VERSION" || echo "dh-make: Ignoring Last Error"
+LOGNAME=root dh_make --createorig -y -l -p hyprgraphics_"$VERSION" || echo "dh-make: Ignoring Last Error"
 dpkg-buildpackage --no-sign
 
 # Move the debs to output
