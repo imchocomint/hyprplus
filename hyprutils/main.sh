@@ -4,7 +4,17 @@ set -e
 
 VERSION="0.8.0"
 
-source ./pika-build-config.sh
+source ~/hyprplus/init.sh
+cd ~/hyprplus/hyrputils
+echo "The architecture in this script is: $COMPUTER_ARCH"
+if [[ "$COMPUTER_ARCH" == "amd64" ]]; then
+    cp ./build-config/amd64-v3.sh ./build-config.sh
+elif [[ "$COMPUTER_ARCH" == "x86" ]]; then
+    cp ./build-config/i386.sh ./build-config.sh
+else
+    exit
+fi
+source ./build-config.sh
 
 echo "$PIKA_BUILD_ARCH" > pika-build-arch
 
