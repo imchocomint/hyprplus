@@ -1,0 +1,28 @@
+Source: hyprutils
+Section: main
+Priority: optional
+Maintainer: ferrreo <harderthanfire@gmail.com>
+Standards-Version: 4.6.1
+Build-Depends: debhelper-compat (= 13),
+               cmake-extras,
+               cmake,
+               libpixman-1-dev
+Rules-Requires-Root: no
+
+Package: libhyprutils
+Architecture: linux-any
+Depends:
+         ${shlibs:Depends},
+         ${misc:Depends},
+         libpixman-1-0
+Provides: hyprutils (= ${binary:Version}),
+Description: Hyprland utilities library used across the ecosystem.
+
+Package: libhyprutils-dev
+Architecture: linux-any
+Depends:
+         ${shlibs:Depends},
+         ${misc:Depends},
+         libhyprutils (= ${binary:Version}),
+Provides: hyprutils-dev (= ${binary:Version}),
+Description: Development files for the Hyprland utilities library used across the ecosystem.

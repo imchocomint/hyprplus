@@ -1,0 +1,23 @@
+#! /usr/bin/make -f
+
+## See debhelper(7) (uncomment to enable).
+## Output every command that modifies files on the build system.
+export DH_VERBOSE = 1
+
+## overriding dh_auto_configure to add custom configs:
+override_dh_auto_configure:
+	cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu -B build
+	cmake --build build --config Release --target all
+
+override_dh_install:
+	DESTDIR=debian/tmp cmake --install build
+	dh_install
+	rm -rfv debian/libhyprutils/usr/lib/*/pkgconfig/hyprutils.pc
+	cp debian/libhyprutils/usr/lib/x86_64-linux-gnu/libhyprutils.so.0.8.1 debian/libhyprutils/usr/lib/x86_64-linux-gnu/libhyprutils.so.1
+	cp debian/libhyprutils/usr/lib/x86_64-linux-gnu/libhyprutils.so.0.8.1 debian/libhyprutils/usr/lib/x86_64-linux-gnu/libhyprutils.so.4
+	cp debian/libhyprutils/usr/lib/x86_64-linux-gnu/libhyprutils.so.0.8.1 debian/libhyprutils/usr/lib/x86_64-linux-gnu/libhyprutils.so.5
+## === End end of region ===
+
+## This here will start the build:
+%:
+	dh $@
