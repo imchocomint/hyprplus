@@ -16,6 +16,7 @@ function check_architecture() {
     export COMPUTER_ARCH
 }
 check_architecture
+cd ./hyprgraphics
 if [[ "$COMPUTER_ARCH" == "amd64" ]]; then
     cp ./build-config/amd64-v3.sh ./build-config.sh
 elif [[ "$COMPUTER_ARCH" == "x86" ]]; then
@@ -41,4 +42,6 @@ dpkg-buildpackage --no-sign
 
 # Move the debs to output
 cd ../
-mv ./*.deb ../
+sudo rm -rf hyprgraphics
+cd ../
+mv ./hyprgraphics/*.deb ./
