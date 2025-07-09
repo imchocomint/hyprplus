@@ -5,4 +5,6 @@ rm *.deb
 ./hyprgraphics/main.sh "$@"
 sudo dpkg -i *.deb
 rm *.deb
-
+./aquamarine/main.sh "$@"
+sudo dpkg -i *.deb
+rm *.deb

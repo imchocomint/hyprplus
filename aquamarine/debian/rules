@@ -1,0 +1,20 @@
+#! /usr/bin/make -f
+
+## See debhelper(7) (uncomment to enable).
+## Output every command that modifies files on the build system.
+export DH_VERBOSE = 1
+
+## overriding dh_auto_configure to add custom configs:
+override_dh_auto_configure:
+	cmake --no-warn-unused-cli -DCMAKE_BUILD_TYPE:STRING=Release -DCMAKE_INSTALL_PREFIX:PATH=/usr -DCMAKE_CXX_STANDARD=17 -S . -B ./build
+	cmake --build ./build --config Release --target all -j`nproc 2>/dev/null || getconf _NPROCESSORS_CONF`
+
+override_dh_install:
+	DESTDIR=debian/tmp cmake --install build
+	dh_install
+	rm -rfv debian/aquamarine/usr/lib/*/pkgconfig/*.pc
+## === End end of region ===
+
+## This here will start the build:
+%:
+	dh $@

@@ -1,0 +1,47 @@
+Source: aquamarine
+Section: admin
+Priority: optional
+Maintainer: imchocomint <tranthienminh2008@gmail.com>
+Standards-Version: 4.6.1
+Build-Depends:
+    debhelper-compat (= 13),
+    build-essential,
+    cmake-extras,
+    cmake,
+    pkg-config,
+    libhyprwayland-scanner-dev,
+    libseat-dev,
+    libinput-bin,
+    libinput-dev,
+    wayland-protocols,
+    libwayland-dev,
+    libhyprutils-dev,
+    mesa-common-dev,
+    libegl1-mesa-dev,
+    libgles2-mesa-dev,
+    libpixman-1-dev,
+    libudev-dev,  
+    hwdata,
+    libdisplay-info-dev,
+Rules-Requires-Root: no
+
+Package: aquamarine
+Architecture: linux-any
+Depends:
+    ${misc:Depends},
+    ${shlibs:Depends},
+    hwdata,
+Provides:
+    libaquamarine0-8 (= ${binary:Version}),
+    libaquamarine0-7 (= ${binary:Version}),
+    libaquamarine0 (= ${binary:Version}),
+    libaquamarine (= ${binary:Version}),
+Description: A very light linux rendering backend library
+
+Package: libaquamarine-dev
+Architecture: linux-any
+Depends:
+    libaquamarine0-8 (= ${binary:Version})
+Provides:
+    aquamarine-dev (= ${binary:Version}),
+Description: Development file for aquamarine a very light linux rendering backend library
