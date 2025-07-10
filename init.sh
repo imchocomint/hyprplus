@@ -17,3 +17,9 @@ rm *.deb
 ./hyprcursor/main.sh "$@"
 sudo dpkg -i *.deb
 rm *.deb
+./xdg-desktop-portal-hyprland/main.sh "$@"
+sudo dpkg -i *.deb
+rm *.deb
+./hyprland-git/main.sh "$@"
+sudo dpkg -i *.deb
+rm *.deb

@@ -1,0 +1,21 @@
+#!/usr/bin/make -f
+
+override_dh_auto_build:
+	dh_auto_build -- PREFIX=/usr all
+
+override_dh_auto_install:
+	# Fix permission on hyprland.pc (Hyprland sets 777 on everything in
+	# build/ directory)
+	chmod 644 build/hyprland.pc
+	# dh_auto_install auto detects the correct DESTDIR.
+	# Modify PREFIX so that this DESTDIR is actually taken into account.
+	# (Upstream Makefile supports PREFIX, but not DESTDIR)
+	dh_auto_install -- PREFIX='$${DESTDIR}/usr'
+
+override_dh_clean:
+	# call clear target provided by Hyprland
+	make clear
+	dh_clean
+
+%:
+	dh $@

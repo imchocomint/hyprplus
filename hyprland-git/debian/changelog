@@ -1,0 +1,25 @@
+hyprland-git (0.49.0git-lxg) pika; urgency=medium
+  * New Upstream Release
+  
+ -- ferrreo <harderthanfire@gmail.com>  Wed, 18 Jan 2025 21:48:14 +0000
+
+hyprland-git (0.48.1git-101pika7) pika; urgency=medium
+  * New Upstream Release
+  
+ -- ferrreo <harderthanfire@gmail.com>  Wed, 18 Jan 2023 21:48:14 +0000
+
+hyprland-git (0.48.1git-101pika3) pika; urgency=medium
+  * New Upstream Release
+  
+ -- ferrreo <harderthanfire@gmail.com>  Wed, 18 Jan 2023 21:48:14 +0000
+
+hyprland-git (0.47.2git-101pika40) pika; urgency=medium
+  * Massive bump
+  
+ -- ferrreo <harderthanfire@gmail.com>  Wed, 18 Jan 2023 21:48:14 +0000
+
+hyprland-git (0.47.0git-101pika3) pika; urgency=medium
+
+  * Renderer rewrite
+  
+ -- ferrreo <harderthanfire@gmail.com>  Wed, 18 Jan 2023 21:48:14 +0000

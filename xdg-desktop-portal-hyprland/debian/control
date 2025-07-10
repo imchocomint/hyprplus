@@ -1,0 +1,45 @@
+Source: xdg-desktop-portal-hyprland
+Section: main
+Priority: optional
+Maintainer: imchocomint <tranthienminh2008@gmail.com>
+Standards-Version: 4.6.1
+Build-Depends: debhelper-compat (= 13),
+               qt6-base-dev,
+               qt6-wayland-dev,
+               meson,
+               build-essential,
+               ninja-build,
+               libpipewire-0.3-dev,
+               cmake-extras,
+               libgbm-dev,
+               libdrm-dev,
+               cmake,
+               libwayland-dev,
+               wayland-protocols,
+               uuid-dev,
+               libinih-dev,
+               libsystemd-dev,
+               libhyprutils-dev,
+               libhyprwayland-scanner-dev,
+               libsdbus-c++-dev,
+               libhyprlang-dev,
+Rules-Requires-Root: no
+
+Package: xdg-desktop-portal-hyprland
+Architecture: linux-any
+Depends:
+         ${shlibs:Depends},
+         ${misc:Depends},
+         hyprland | hyprland-git,
+         qt6-wayland,
+         xdg-desktop-portal,
+Provides: xdg-desktop-portal-hyprland, xdg-desktop-portal-backend (= 1.7.1)
+Description: Desktop portal for hyprland
+
+Package: xdg-desktop-portal-hyprland-dev
+Architecture: linux-any
+Depends:
+         ${shlibs:Depends},
+         ${misc:Depends},
+         xdg-desktop-portal-hyprland (= ${binary:Version}),
+Description: Development files for Desktop portal for hyprland
