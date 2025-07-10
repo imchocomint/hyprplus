@@ -1,0 +1,23 @@
+hyprcursor (0.1.12-lxg) pika; urgency=medium
+
+  * New Upstream Release
+
+ -- ferreo <harderthanfire@gmail.com>  Wed, 18 Jan 2025 21:48:14 +0000
+
+hyprcursor (0.1.10-101pika1) pika; urgency=medium
+
+  * New Upstream Release
+
+ -- ferreo <harderthanfire@gmail.com>  Wed, 18 Jan 2023 21:48:14 +0000
+
+hyprcursor (0.1.9-101pika1) pika; urgency=medium
+
+  * Port to PikaOS 4.
+
+ -- ferreo <harderthanfire@gmail.com>  Wed, 18 Jan 2023 21:48:14 +0000
+
+hyprcursor (0.1.9-100pika1) pikauwu; urgency=medium
+
+  * Initial release.
+
+ -- ferreo <harderthanfire@gmail.com>  Wed, 18 Jan 2023 21:48:14 +0000

@@ -1,0 +1,40 @@
+Source: hyprcursor
+Section: main
+Priority: optional
+Maintainer: imchocomint <tranthienminh2008@gmail.com>
+Standards-Version: 4.6.1
+Build-Depends: debhelper-compat (= 13),
+               build-essential,
+               cmake-extras,
+               cmake,
+               libcairo2-dev,
+               libzip-dev,
+               librsvg2-dev,
+               libtomlplusplus-dev,
+               libhyprlang-dev
+Rules-Requires-Root: no
+
+Package: libhyprcursor
+Architecture: linux-any
+Depends:
+         ${shlibs:Depends},
+         ${misc:Depends},
+Provides: hyprcursor (= ${binary:Version}),
+Description: Libraries for the Hyprland cursor format, library and utilities.
+
+Package: hyprcursor-util
+Architecture: linux-any
+Depends:
+         ${shlibs:Depends},
+         ${misc:Depends},
+         libhyprcursor (= ${binary:Version}),
+Description: The Hyprland cursor format, library and utilities.
+
+Package: libhyprcursor-dev
+Architecture: linux-any
+Depends:
+         ${shlibs:Depends},
+         ${misc:Depends},
+         libhyprcursor (= ${binary:Version}),
+Provides: hyprcursor-dev (= ${binary:Version}),
+Description: Development files for The hyprland cursor format, library and utilities.

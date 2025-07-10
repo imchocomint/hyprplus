@@ -2,8 +2,7 @@
 
 set -e
 
-VERSION="0.9.1"
-
+VERSION="0.6.3"
 function check_architecture() {
     local arch=$(uname -m)
     if [[ "$arch" == "x86_64" ]]; then
@@ -17,7 +16,7 @@ function check_architecture() {
     export COMPUTER_ARCH
 }
 check_architecture
-cd ./aquamarine
+cd ./hyprlang
 if [[ "$COMPUTER_ARCH" == "amd64" ]]; then
     cp ./build-config/amd64-v3.sh ./build-config.sh
 elif [[ "$COMPUTER_ARCH" == "x86" ]]; then
@@ -29,19 +28,20 @@ source ./build-config.sh
 
 echo "$PIKA_BUILD_ARCH" > pika-build-arch
 
-# Get the source
-git clone --recurse-submodules https://github.com/hyprwm/aquamarine
-cp -rvf ./debian ./aquamarine/
-cd ./aquamarine
+# Clone Upstream
+git clone --recurse-submodules https://github.com/hyprwm/hyprlang -b v"$VERSION"
+cp -rvf ./debian ./hyprlang/
+cd ./hyprlang
+
 # Get build deps
 apt-get build-dep ./ -y
 
 # Build package
-LOGNAME=root dh_make --createorig -y -l -p aquamarine_"$VERSION" || echo "dh-make: Ignoring Last Error"
+LOGNAME=root dh_make --createorig -y -l -p hyprlang_"$VERSION" || echo "dh-make: Ignoring Last Error"
 dpkg-buildpackage --no-sign
 
 # Move the debs to output
 cd ../
-sudo rm -rf aquamarine
+sudo rm -rf hyprlang
 cd ../
-mv ./aquamarine/*.deb ./
+mv ./hyprlang/*.deb ./

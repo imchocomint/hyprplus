@@ -1,0 +1,28 @@
+Source: hyprlang
+Section: main
+Priority: optional
+Maintainer: imchocomint <tranthienminh2008@gmail.com>
+Standards-Version: 4.6.1
+Build-Depends: debhelper-compat (= 13),
+               cmake-extras,
+               cmake,
+               libhyprutils-dev
+Rules-Requires-Root: no
+
+Package: libhyprlang
+Architecture: linux-any
+Depends:
+         ${shlibs:Depends},
+         ${misc:Depends},
+         libhyprutils
+Provides: hyprlang (= ${binary:Version})
+Description: The Hypr configuration language library
+
+Package: libhyprlang-dev
+Architecture: linux-any
+Depends:
+         ${shlibs:Depends},
+         ${misc:Depends},
+         libhyprlang (= ${binary:Version}),
+Provides: hyprlang-dev (= ${binary:Version})
+Description: Development files for the Hypr configuration language library
