@@ -25,7 +25,7 @@ For GCC 15, refer to [this](https://github.com/imchocomint/Hyprbian#install-gcc-
 For libstdc++15, refer to [this](https://github.com/imchocomint/Hyprbian#install-libstdc15).
 
 ### Install
-Clone this repo, cd to the folder and do ` sudo ./main.sh `
+Clone this repo, cd to the folder and do ` sudo ./init.sh `
 
 #
 Thanks!
