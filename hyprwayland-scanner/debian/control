@@ -1,0 +1,29 @@
+Source: hyprwayland-scanner
+Section: main
+Priority: optional
+Maintainer: imchocomint <htranthienminh2008@gmail.com>
+Standards-Version: 4.6.1
+Build-Depends: debhelper-compat (= 13),
+               build-essential,
+               cmake-extras,
+               cmake,
+               libpugixml-dev
+Rules-Requires-Root: no
+
+Package: hyprwayland-scanner
+Architecture: linux-any
+Depends:
+         ${shlibs:Depends},
+         ${misc:Depends},
+         libpugixml1v5
+Provides: libhyprwayland-scanner (= ${binary:Version}),
+Description: A Hyprland implementation of wayland-scanner.
+
+Package: libhyprwayland-scanner-dev
+Architecture: linux-any
+Depends:
+         ${shlibs:Depends},
+         ${misc:Depends},
+         libhyprwayland-scanner (= ${binary:Version}),
+Provides: hyprwayland-scanner-dev (= ${binary:Version}),
+Description: Development files for the Hyprland implementation of wayland-scanner.

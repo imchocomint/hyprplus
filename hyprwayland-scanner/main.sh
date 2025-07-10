@@ -2,7 +2,7 @@
 
 set -e
 
-VERSION="0.9.1"
+VERSION="0.4.5"
 
 function check_architecture() {
     local arch=$(uname -m)
@@ -17,7 +17,7 @@ function check_architecture() {
     export COMPUTER_ARCH
 }
 check_architecture
-cd ./aquamarine
+cd ./hyprwayland-scanner
 if [[ "$COMPUTER_ARCH" == "amd64" ]]; then
     cp ./build-config/amd64-v3.sh ./build-config.sh
 elif [[ "$COMPUTER_ARCH" == "x86" ]]; then
@@ -29,19 +29,20 @@ source ./build-config.sh
 
 echo "$PIKA_BUILD_ARCH" > pika-build-arch
 
-# Get the source tarball
-git clone --recurse-submodules https://github.com/hyprwm/aquamarine
-cp -rvf ./debian ./aquamarine/
-cd ./aquamarine
+# Clone Upstream
+git clone --recurse-submodules https://github.com/hyprwm/hyprwayland-scanner -b v"$VERSION"
+cp -rvf ./debian ./hyprwayland-scanner/
+cd ./hyprwayland-scanner
+
 # Get build deps
 apt-get build-dep ./ -y
 
 # Build package
-LOGNAME=root dh_make --createorig -y -l -p aquamarine_"$VERSION" || echo "dh-make: Ignoring Last Error"
+LOGNAME=root dh_make --createorig -y -l -p hyprwayland-scanner_"$VERSION" || echo "dh-make: Ignoring Last Error"
 dpkg-buildpackage --no-sign
 
 # Move the debs to output
 cd ../
-sudo rm -rf aquamarine
+sudo rm -rf hyprwayland-scanner
 cd ../
-mv ./aquamarine/*.deb ./
+mv ./hyprwayland-scanner/*.deb ./
