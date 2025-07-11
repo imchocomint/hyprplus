@@ -45,4 +45,4 @@ dpkg-buildpackage --no-sign
 cd ../
 sudo rm -rf hyprland
 cd ../
-mv ./hyprland/*.deb ./
+mv ./hyprland-git/*.deb ./
