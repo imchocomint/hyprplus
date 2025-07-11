@@ -17,7 +17,7 @@ function check_architecture() {
     export COMPUTER_ARCH
 }
 check_architecture
-cd ./hyprland
+cd ./hyprland-git
 if [[ "$COMPUTER_ARCH" == "amd64" ]]; then
     cp ./build-config/amd64-v3.sh ./build-config.sh
 elif [[ "$COMPUTER_ARCH" == "x86" ]]; then
