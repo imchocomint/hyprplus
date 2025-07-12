@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo apt update
-sudo apt install dh-make build-essential git make python3 binutils perl tar gzip bzip2 libgbm-dev libre2-dev libxcb-icccm4-dev libxcb-res0-dev libxcb-errors-dev libtomlplusplus-dev
+sudo apt install dh-make build-essential git make python3 binutils perl tar gzip bzip2 libgbm-dev libre2-dev libxcb-icccm4-dev libxcb-res0-dev libxcb-errors-dev libtomlplusplus-dev qt6-wayland
 sudo ./hyprutils/main.sh "$@"
 sudo dpkg -i *.deb
 rm *.deb
