@@ -25,7 +25,19 @@ For GCC 15, refer to [this](https://github.com/imchocomint/Hyprbian#install-gcc-
 For libstdc++15, refer to [this](https://github.com/imchocomint/Hyprbian#install-libstdc15).
 
 ### Install
-Clone this repo, cd to the folder and do ` sudo ./init.sh `
+```
+wget https://github.com/imchocomint/hyprplus/blob/main/bootstrap.sh
+sudo bash ./bootstrap.sh
+```
 
+## Build
+Should only be used after installing the packages (this is not an install script since without the .deb packages the build process is broken).
+```
+git clone https://github.com/imchocomint/hyprplus
+cd hyprplus
+cd build
+sudo ./init.sh
+```
+All dependencies are installed in the build scripts
 #
 Thanks!
