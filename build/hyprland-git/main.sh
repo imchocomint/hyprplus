@@ -2,7 +2,7 @@
 
 set -e
 
-VERSION="0.49.0git"
+VERSION="0.50.0git"
 
 function check_architecture() {
     local arch=$(uname -m)
@@ -31,9 +31,6 @@ echo "$PIKA_BUILD_ARCH" > pika-build-arch
 
 # Clone Upstream
 git clone --recurse-submodules https://github.com/hyprwm/hyprland 
-cd hyprland
-git checkout 523eed048e91da9b99c73a48f365ad52f11ae690
-cd ../
 cp -rvf ./debian ./hyprland/
 cd ./hyprland
 
