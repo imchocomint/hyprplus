@@ -18,6 +18,10 @@ The project will be the base for [Repologist](https://worktree.ca/meowniverse/re
 - [ ] Adding more support
 - [ ] Pushing packages to Debian's repositories (once GCC 15 comes to sid)
 
+## Quirks
+- hyprctl still marks version as 0.49.0; fastfetch didn't (that's on hyprwm team, not me)
+- slow download speed over GitHub. May move to another host if persists.
+
 ## Guide
 ### Install GCC/G++ 15 and libstdc++15
 For GCC 15, refer to [this](https://github.com/imchocomint/Hyprbian#install-gcc-15-not-applicable-to-experimental).
