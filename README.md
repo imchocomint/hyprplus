@@ -19,7 +19,7 @@ The project will be the base for [Repologist](https://worktree.ca/meowniverse/re
 - [ ] Pushing packages to Debian's repositories (once GCC 15 comes to sid)
 
 ## Quirks
-- hyprctl still marks version as 0.49.0; fastfetch didn't ~~(that's on hyprwm team, not me)~~ no that's on me. Temp fix is to run the manual build script and manually install Hyprland and let it overwrite the installed one.
+- hyprctl still marks version as 0.50.0; fastfetch didn't; also hyprctl reports that you're on latest commit. If you want to, just compile and install Hyprland from scratch.
 - slow download speed over GitHub. May move to another host if persists.
 
 ## Guide
