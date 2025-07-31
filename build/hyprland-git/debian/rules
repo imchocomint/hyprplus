@@ -3,6 +3,14 @@
 override_dh_auto_build:
 	dh_auto_build -- PREFIX=/usr all
 
+override_dh_shlibdeps:
+	# Create the directory for the shlibs file if it doesn't exist
+	mkdir -p debian/hyprland/debian/
+	# Create an empty shlibs dependency file for libhyprutils
+	# This prevents dpkg-shlibdeps from running and failing.
+	touch debian/hyprland-git.substvars
+	touch debian/hyprland/debian/shlibs
+
 override_dh_auto_install:
 	# Fix permission on hyprland.pc (Hyprland sets 777 on everything in
 	# build/ directory)

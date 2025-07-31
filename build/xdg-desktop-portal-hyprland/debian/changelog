@@ -1,47 +1,5 @@
-xdg-desktop-portal-hyprland (1.3.10-lxg) unstable; urgency=medium
+xdg-desktop-portal-hyprland (1.3.10-r) unstable; urgency=medium
 
   * New upstream release
 
- -- ferreo <harderthanfire@gmail.com>  Wed, 18 Jan 2025 21:48:14 +0000
-
-xdg-desktop-portal-hyprland (1.3.9-lxg) pika; urgency=medium
-
-  * New upstream release
-
- -- ferreo <harderthanfire@gmail.com>  Wed, 18 Jan 2025 21:48:14 +0000
-
-xdg-desktop-portal-hyprland (1.3.8-101pika1) pika; urgency=medium
-
-  * New upstream release
-
- -- ferreo <harderthanfire@gmail.com>  Wed, 18 Jan 2023 21:48:14 +0000
-
-xdg-desktop-portal-hyprland (1.3.7-101pika1) pika; urgency=medium
-
-  * New upstream release
-
- -- ferreo <harderthanfire@gmail.com>  Wed, 18 Jan 2023 21:48:14 +0000
-
-xdg-desktop-portal-hyprland (1.3.6-101pika1) pika; urgency=medium
-
-  * New upstream release
-
- -- ferreo <harderthanfire@gmail.com>  Wed, 18 Jan 2023 21:48:14 +0000
-
-xdg-desktop-portal-hyprland (1.3.3-101pika1) pika; urgency=medium
-
-  * Port to PikaOS 4
-
- -- ferreo <harderthanfire@gmail.com>  Wed, 18 Jan 2023 21:48:14 +0000
-
-xdg-desktop-portal-hyprland (1.3.3-100pika1) pikauwu; urgency=medium
-
-  * Security Fix
-
- -- ferreo <harderthanfire@gmail.com>  Wed, 18 Jan 2023 21:48:14 +0000
-
-xdg-desktop-portal-hyprland (1.3.2-100pika1) pikauwu; urgency=medium
-
-  * New upstream release
-
- -- ferreo <harderthanfire@gmail.com>  Wed, 18 Jan 2023 21:48:14 +0000
+ -- imchocomint <tranthienminh2008@gmail.com>  Thu, 31 Jul 2025 21:48:14 +0000

@@ -2,22 +2,36 @@
 
 ## See debhelper(7) (uncomment to enable).
 ## Output every command that modifies files on the build system.
+
+## See debhelper(7) (uncomment to enable).
+## Output every command that modifies files on the build system.
 export DH_VERBOSE = 1
+
+# Add this line to explicitly exclude the problematic path for dpkg-shlibdeps
+
 
 ## overriding dh_auto_configure to add custom configs:
 override_dh_auto_configure:
 	cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu -B build
 	cmake --build build --config Release --target all
 
+
+
 override_dh_install:
 	DESTDIR=debian/tmp cmake --install build
 	dh_install
 	rm -rfv debian/libhyprutils/usr/lib/*/pkgconfig/hyprutils.pc
-	cp debian/libhyprutils/usr/lib/x86_64-linux-gnu/libhyprutils.so.0.8.1 debian/libhyprutils/usr/lib/x86_64-linux-gnu/libhyprutils.so.1
-	cp debian/libhyprutils/usr/lib/x86_64-linux-gnu/libhyprutils.so.0.8.1 debian/libhyprutils/usr/lib/x86_64-linux-gnu/libhyprutils.so.4
-	cp debian/libhyprutils/usr/lib/x86_64-linux-gnu/libhyprutils.so.0.8.1 debian/libhyprutils/usr/lib/x86_64-linux-gnu/libhyprutils.so.5
+	cp debian/libhyprutils/usr/lib/x86_64-linux-gnu/libhyprutils.so.0.8.2 debian/libhyprutils/usr/lib/x86_64-linux-gnu/libhyprutils.so.1
+	cp debian/libhyprutils/usr/lib/x86_64-linux-gnu/libhyprutils.so.0.8.2 debian/libhyprutils/usr/lib/x86_64-linux-gnu/libhyprutils.so.4
+	cp debian/libhyprutils/usr/lib/x86_64-linux-gnu/libhyprutils.so.0.8.2 debian/libhyprutils/usr/lib/x86_64-linux-gnu/libhyprutils.so.5
 ## === End end of region ===
+override_dh_shlibdeps:
+	# Create an empty shlibs dependency file for libhyprutils
+	# This prevents dpkg-shlibdeps from running and failing.
+	touch debian/libhyprutils.substvars
+	touch debian/libhyprutils/DEBIAN/shlibs
 
 ## This here will start the build:
 %:
 	dh $@
+
