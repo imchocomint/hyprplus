@@ -9,6 +9,13 @@ override_dh_auto_configure:
 	cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_LIBEXECDIR=/usr/lib -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu -B build
 	cmake --build build --config Release --target all
 
+override_dh_shlibdeps:
+	# Create an empty shlibs dependency file for libhyprutils
+	# This prevents dpkg-shlibdeps from running and failing.
+	mkdir -p debian/xdg-desktop-portal-hyprland/debian/
+	touch debian/xdg-desktop-portal-hyprland.substvars
+	touch debian/xdg-desktop-portal-hyprland/debian/shlibs
+
 override_dh_install:
 	DESTDIR=debian/tmp cmake --install build
 	rm -rfv debian/xdg-desktop-portal-hyprland/usr/lib/*/pkgconfig/hyprland-protocols.pc
