@@ -1,7 +1,7 @@
 Source: hyprland-git
 Section: main
 Priority: optional
-Maintainer: ferrreo <harderthanfire@gmail.com>
+Maintainer: imchocomint <htranthienminh2008@gmail.com>
 Standards-Version: 4.6.1
 Build-Depends: 
               debhelper-compat (= 13),
