@@ -103,6 +103,16 @@ xdg_desktop_packages=(
 DOWNLOAD_DIR="hypr_pkgs"
 mkdir -p "$DOWNLOAD_DIR"
 cd "$DOWNLOAD_DIR" || { echo "Failed to enter download directory."; exit 1; }
+echo "--- Installing dependencies ---"
+sudo apt install \
+libliftoff0 libqt6core6t64 libqt6gui6 libqt6qml6 \
+libqt6quickcontrols2 libqt6widgets6* \ 
+qml6-module-qtquick-* \
+libxcb* \
+libdis86* \
+libdisplay-info* \
+libzip* \ 
+libtomlplusplus* \
 
 echo "--- Starting download of all Hypr* files ---"
 
