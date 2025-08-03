@@ -1,3 +1,7 @@
+Official SourceForge mirror: https://sourceforge.net/projects/hyprplus-mirror/
+
+Maintained by meoniverse, the team behind LunarXG. Thank you
+
 # hyprplus
 Project Hyprplus is bringing Hyprland packages (Hyprland and its dependencies) to Debian in the form of native .deb packages
 
