@@ -1,7 +1,9 @@
 #!/bin/bash
 
+# Define the base URL for the package downloads.
 BASE_URL="https://github.com/imchocomint/hyprplus/releases/latest/download/"
 
+# Define all packages to download and install.
 all_packages=(
     "aquamarine-dbgsym-latest.deb"
     "aquamarine-latest.deb"
@@ -32,45 +34,65 @@ all_packages=(
     "xdg-desktop-portal-hyprland-latest.deb"
 )
 
-hyprlang_packages=(
-    "libhyprlang-dbgsym-latest.deb"
-    "libhyprlang-dev-latest.deb"
-    "libhyprlang-latest.deb"
-)
+# --- Define package groups based on your requested order ---
 
 hyprutils_packages=(
-    "libhyprutils-dbgsym-latest.deb"
-    "libhyprutils-dev-latest.deb"
     "libhyprutils-latest.deb"
+    "libhyprutils-dev-latest.deb"
+    "libhyprutils-dbgsym-latest.deb"
 )
 
-hyprland_git_packages=(
-    "hyprland-git-dbgsym-latest.deb"
+hyprland_packages=(
     "hyprland-git-latest.deb"
+    "hyprland-git-dbgsym-latest.deb"
 )
+
+hyprcursor_packages=(
+    "hyprcursor-util-latest.deb"
+    "hyprcursor-util-dbgsym-latest.deb"
+    "libhyprcursor-latest.deb"
+    "libhyprcursor-dev-latest.deb"
+    "libhyprcursor-dbgsym-latest.deb"
+)
+
+hyprlang_packages=(
+    "libhyprlang-latest.deb"
+    "libhyprlang-dev-latest.deb"
+    "libhyprlang-dbgsym-latest.deb"
+)
+
+hyprgraphics_packages=(
+    "libhyprgraphics-latest.deb"
+    "libhyprgraphics-dev-latest.deb"
+    "libhyprgraphics-dbgsym-latest.deb"
+)
+
+aquamarine_packages=(
+    "aquamarine-latest.deb"
+    "libaquamarine-dev-latest.deb"
+    "aquamarine-dbgsym-latest.deb"
+)
+
+hyprwayland_scanner_packages=(
+    "hyprwayland-scanner-latest.deb"
+    "hyprwayland-scanner-dbgsym-latest.deb"
+    "libhyprwayland-scanner-latest.deb"
+)
+
 hyprland_qtutils_packages=(
-    "hyprland-qtutils-dbgsym-latest.deb"
     "hyprland-qtutils-latest.deb"
+    "hyprland-qtutils-dbgsym-latest.deb"
 )
+
 xdg_desktop_packages=(
-    "xdg-desktop-portal-hyprland-dbgsym-latest.deb"
-    "xdg-desktop-portal-hyprland-dev-latest.deb"
     "xdg-desktop-portal-hyprland-latest.deb"
+    "xdg-desktop-portal-hyprland-dev-latest.deb"
+    "xdg-desktop-portal-hyprland-dbgsym-latest.deb"
 )
 
-declare -A ordered_set
-for pkg in "${hyprlang_packages[@]}" "${hyprutils_packages[@]}" "${hyprland_qtutils_packages[@]}" "${hyprland_git_packages[@]}" "${xdg_desktop_packages[@]}"; do
-    ordered_set["$pkg"]=1
-done
+# --- Download all packages ---
 
-other_packages=()
-for pkg in "${all_packages[@]}"; do
-    if [[ -z "${ordered_set[$pkg]}" ]]; then
-        other_packages+=("$pkg")
-    fi
-done
-
-
+# Define a directory for downloads.
 DOWNLOAD_DIR="hypr_pkgs"
 mkdir -p "$DOWNLOAD_DIR"
 cd "$DOWNLOAD_DIR" || { echo "Failed to enter download directory."; exit 1; }
@@ -87,8 +109,10 @@ done
 
 echo "--- All downloads complete. Starting installation ---"
 
-
+# --- Installation function ---
+# This function installs a group of packages and attempts to fix dependencies.
 install_and_fix() {
+    # Use a nameref to reference the array by name.
     local -n pkgs_array=$1
     local group_name=$2
 
@@ -102,6 +126,7 @@ install_and_fix() {
     for pkg in "${pkgs_array[@]}"; do
         if [ -f "$pkg" ]; then
             echo "Installing $pkg..."
+            # Use sudo to run the installation with elevated privileges.
             sudo dpkg -i "$pkg"
         else
             echo "Warning: ${pkg} not found in download directory. Skipping."
@@ -109,16 +134,21 @@ install_and_fix() {
     done
 
     echo "Attempting to fix broken dependencies for ${group_name} packages..."
+    # Attempt to install missing dependencies.
     sudo apt install -f
     echo "Dependency fix attempt complete for ${group_name}."
 }
 
-# Install packages in the specified order
-install_and_fix hyprlang_packages "libhyprlang"
+# --- Install packages in the new, specified order ---
+# This section now installs the packages in the order you requested.
 install_and_fix hyprutils_packages "libhyprutils"
-install_and_fix other_packages "other"
+install_and_fix hyprlang_packages "libhyprlang"
+install_and_fix hyprgraphics_packages "libhyprgraphics"
+install_and_fix hyprcursor_packages "libhyprcursor"
+install_and_fix aquamarine_packages "aquamarine"
+install_and_fix hyprwayland_scanner_packages "hyprwayland-scanner"
 install_and_fix hyprland_qtutils_packages "hyprland-qtutils"
-install_and_fix hyprland_git_packages "hyprland-git"
+install_and_fix hyprland_packages "hyprland-git"
 install_and_fix xdg_desktop_packages "xdg-desktop-portal-hyprland"
 
 echo ""
