@@ -11,6 +11,8 @@ all_packages=(
     "hyprcursor-util-latest.deb"
     "hyprland-git-dbgsym-latest.deb"
     "hyprland-git-latest.deb"
+    "hyprland-qt-support-dbgsym-latest.deb"
+    "hyprland-qt-support-latest.deb"    
     "hyprland-qtutils-dbgsym-latest.deb"
     "hyprland-qtutils-latest.deb"
     "hyprwayland-scanner-dbgsym-latest.deb"
@@ -84,6 +86,11 @@ hyprland_qtutils_packages=(
     "hyprland-qtutils-dbgsym-latest.deb"
 )
 
+hyprland_qtsupport_packages=(
+    "hyprland-qt-support-latest.deb"
+    "hyprland-qt-support-dbgsym-latest.deb"
+)
+
 xdg_desktop_packages=(
     "xdg-desktop-portal-hyprland-latest.deb"
     "xdg-desktop-portal-hyprland-dev-latest.deb"
@@ -147,6 +154,7 @@ install_and_fix hyprgraphics_packages "libhyprgraphics"
 install_and_fix hyprcursor_packages "libhyprcursor"
 install_and_fix aquamarine_packages "aquamarine"
 install_and_fix hyprwayland_scanner_packages "hyprwayland-scanner"
+install_and_fix hyprland_qtsupport_packages "hyprland-qt-support"
 install_and_fix hyprland_qtutils_packages "hyprland-qtutils"
 install_and_fix hyprland_packages "hyprland-git"
 install_and_fix xdg_desktop_packages "xdg-desktop-portal-hyprland"
