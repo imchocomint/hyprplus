@@ -9,6 +9,8 @@ all_packages=(
     "hyprcursor-util-latest.deb"
     "hyprland-git-dbgsym-latest.deb"
     "hyprland-git-latest.deb"
+    "hyprland-qtutils-dbgsym-latest.deb"
+    "hyprland-qtutils-latest.deb"
     "hyprwayland-scanner-dbgsym-latest.deb"
     "hyprwayland-scanner-latest.deb"
     "libaquamarine-dev-latest.deb"
@@ -46,7 +48,10 @@ hyprland_git_packages=(
     "hyprland-git-dbgsym-latest.deb"
     "hyprland-git-latest.deb"
 )
-
+hyprland_qtutils_packages=(
+    "hyprland-qtutils-dbgsym-latest.deb"
+    "hyprland-qtutils-latest.deb"
+)
 xdg_desktop_packages=(
     "xdg-desktop-portal-hyprland-dbgsym-latest.deb"
     "xdg-desktop-portal-hyprland-dev-latest.deb"
@@ -54,7 +59,7 @@ xdg_desktop_packages=(
 )
 
 declare -A ordered_set
-for pkg in "${hyprlang_packages[@]}" "${hyprutils_packages[@]}" "${hyprland_git_packages[@]}" "${xdg_desktop_packages[@]}"; do
+for pkg in "${hyprlang_packages[@]}" "${hyprutils_packages[@]}" "${hyprland_qtutils_packages[@]}" "${hyprland_git_packages[@]}" "${xdg_desktop_packages[@]}"; do
     ordered_set["$pkg"]=1
 done
 
@@ -112,6 +117,7 @@ install_and_fix() {
 install_and_fix hyprlang_packages "libhyprlang"
 install_and_fix hyprutils_packages "libhyprutils"
 install_and_fix other_packages "other"
+install_and_fix hyprland_qtutils_packages "hyprland-qtutils"
 install_and_fix hyprland_git_packages "hyprland-git"
 install_and_fix xdg_desktop_packages "xdg-desktop-portal-hyprland"
 
