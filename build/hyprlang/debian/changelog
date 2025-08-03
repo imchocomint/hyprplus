@@ -1,35 +1,5 @@
-hyprlang (0.6.4-lxg) unstable; urgency=medium
+hyprlang (0.6.4) unstable; urgency=medium
 
   * Upstream release
 
- -- ferreo <harderthanfire@gmail.com>  Wed, 18 Jan 2025 21:48:14 +0000
-
-hyprlang (0.6.1-101pika1) pika; urgency=medium
-
-  * Upstream release
-
- -- ferreo <harderthanfire@gmail.com>  Wed, 18 Jan 2023 21:48:14 +0000
-
-hyprlang (0.6.0-101pika1) pika; urgency=medium
-
-  * Upstream release
-
- -- ferreo <harderthanfire@gmail.com>  Wed, 18 Jan 2023 21:48:14 +0000
-
-hyprlang (0.5.3-101pika1) pika; urgency=medium
-
-  * Upstream release
-
- -- ferreo <harderthanfire@gmail.com>  Wed, 18 Jan 2023 21:48:14 +0000
-
-hyprlang (0.5.2-101pika1) pika; urgency=medium
-
-  * Port to PikaOS 4
-
- -- ferreo <harderthanfire@gmail.com>  Wed, 18 Jan 2023 21:48:14 +0000
-
-hyprlang (0.5.2-100pika1) pikauwu; urgency=medium
-
-  * Initial release.
-
- -- ferreo <harderthanfire@gmail.com>  Wed, 18 Jan 2023 21:48:14 +0000
+ -- imchocomint <tranthienminh2008@gmail.com>  Wed, 18 Jan 2025 21:48:14 +0000

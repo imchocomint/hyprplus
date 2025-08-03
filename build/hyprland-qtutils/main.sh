@@ -38,7 +38,7 @@ cd ./hyprland-qtutils
 apt-get build-dep ./ -y
 
 # Build package
-LOGNAME=root dh_make --createorig -y -l -p hyprland-qtutils_latest || echo "dh-make: Ignoring Last Error"
+LOGNAME=root dh_make -n -y -l -p hyprland-qtutils_latest || echo "dh-make: Ignoring Last Error"
 dpkg-buildpackage --no-sign
 
 # Move the debs to output

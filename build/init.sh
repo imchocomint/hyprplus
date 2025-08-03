@@ -10,3 +10,4 @@ sudo ./aquamarine/main.sh "$@"
 sudo ./hyprcursor/main.sh "$@"
 sudo ./hyprland-git/main.sh "$@"
 sudo ./xdg-desktop-portal-hyprland/main.sh "$@"
+bash rename.sh

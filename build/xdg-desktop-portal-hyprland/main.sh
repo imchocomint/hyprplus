@@ -38,7 +38,7 @@ cd ./xdg-desktop-portal-hyprland
 apt-get build-dep ./ -y
 
 # Build package
-LOGNAME=root dh_make --createorig -y -l -p xdg-desktop-portal-hyprland_latest || echo "dh-make: Ignoring Last Error"
+LOGNAME=root dh_make -n -y -l -p xdg-desktop-portal-hyprland_latest || echo "dh-make: Ignoring Last Error"
 dpkg-buildpackage --no-sign
 
 # Move the debs to output
