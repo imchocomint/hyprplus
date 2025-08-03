@@ -37,7 +37,7 @@ Add experimental repos to system repos. Then install GCC 15 (gcc-15) and G++ 15 
 
 ### Install
 ```
-wget https://github.com/imchocomint/hyprplus/blob/main/bootstrap.sh
+wget https://raw.githubusercontent.com/imchocomint/hyprplus/refs/heads/main/bootstrap.sh
 sudo bash ./bootstrap.sh
 ```
 
