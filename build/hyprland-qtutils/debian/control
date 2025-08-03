@@ -1,0 +1,30 @@
+Source: hyprland-qtutils
+Section: main
+Priority: optional
+Maintainer: imchocomint <tranthienminh2008@gmail.com>
+Standards-Version: 4.6.1
+Build-Depends: debhelper-compat (= 13),
+               build-essential,
+               cmake,
+               pkgconf,
+               libhyprutils-dev,
+               qt6-base-dev,
+               qt6-base-private-dev,
+               qt6-wayland,
+               qt6-wayland-dev,
+               qt6-wayland-private-dev,
+               qt6-declarative-dev,
+Rules-Requires-Root: no
+
+Package: hyprland-qtutils
+Architecture: linux-any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ qml6-module-qtquick-controls,
+ qml6-module-qtquick-layouts,
+ qml6-module-qtquick-templates,
+ qml6-module-qtqml-workerscript,
+ hyprland-qt-support,
+Description: Some qt/qml utilities used by hypr apps
+

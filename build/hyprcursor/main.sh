@@ -2,7 +2,7 @@
 
 set -e
 
-VERSION="0.1.12"
+VERSION="0.1.13"
 
 function check_architecture() {
     local arch=$(uname -m)
@@ -30,7 +30,7 @@ source ./build-config.sh
 echo "$PIKA_BUILD_ARCH" > pika-build-arch
 
 # Clone Upstream
-git clone --recurse-submodules https://github.com/hyprwm/hyprcursor -b v"$VERSION"
+git clone --recurse-submodules https://github.com/hyprwm/hyprcursor
 cp -rvf ./debian ./hyprcursor/
 cd ./hyprcursor
 
@@ -38,7 +38,7 @@ cd ./hyprcursor
 apt-get build-dep ./ -y
 
 # Build package
-LOGNAME=root dh_make --createorig -y -l -p hyprcursor_"$VERSION" || echo "dh-make: Ignoring Last Error"
+LOGNAME=root dh_make --createorig -y -l -p hyprcursor_latest || echo "dh-make: Ignoring Last Error"
 dpkg-buildpackage --no-sign
 
 # Move the debs to output

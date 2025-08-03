@@ -1,7 +1,7 @@
 Source: hyprland-git
 Section: main
 Priority: optional
-Maintainer: imchocomint <htranthienminh2008@gmail.com>
+Maintainer: imchocomint <tranthienminh2008@gmail.com>
 Standards-Version: 4.6.1
 Build-Depends: 
               debhelper-compat (= 13),
@@ -77,7 +77,7 @@ Depends: fontconfig,
          ${shlibs:Depends},
          ${misc:Depends},
          seatd,
-         libdisplay-info0,
+         libdisplay-info2,
          libhyprwayland-scanner,
          libhyprcursor,
          hyprland-qtutils,

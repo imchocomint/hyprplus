@@ -29,7 +29,7 @@ source ./build-config.sh
 echo "$PIKA_BUILD_ARCH" > pika-build-arch
 
 # Clone Upstream
-git clone --recurse-submodules https://github.com/hyprwm/hyprlang -b v"$VERSION"
+git clone --recurse-submodules https://github.com/hyprwm/hyprlang
 cp -rvf ./debian ./hyprlang/
 cd ./hyprlang
 
@@ -37,7 +37,7 @@ cd ./hyprlang
 apt-get build-dep ./ -y
 
 # Build package
-LOGNAME=root dh_make --createorig -y -l -p hyprlang_"$VERSION" || echo "dh-make: Ignoring Last Error"
+LOGNAME=root dh_make --createorig -y -l -p hyprlang_latest || echo "dh-make: Ignoring Last Error"
 dpkg-buildpackage --no-sign
 
 # Move the debs to output

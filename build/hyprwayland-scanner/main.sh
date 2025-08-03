@@ -30,7 +30,7 @@ source ./build-config.sh
 echo "$PIKA_BUILD_ARCH" > pika-build-arch
 
 # Clone Upstream
-git clone --recurse-submodules https://github.com/hyprwm/hyprwayland-scanner -b v"$VERSION"
+git clone --recurse-submodules https://github.com/hyprwm/hyprwayland-scanner
 cp -rvf ./debian ./hyprwayland-scanner/
 cd ./hyprwayland-scanner
 
@@ -38,7 +38,7 @@ cd ./hyprwayland-scanner
 apt-get build-dep ./ -y
 
 # Build package
-LOGNAME=root dh_make --createorig -y -l -p hyprwayland-scanner_"$VERSION" || echo "dh-make: Ignoring Last Error"
+LOGNAME=root dh_make --createorig -y -l -p hyprwayland-scanner_latest || echo "dh-make: Ignoring Last Error"
 dpkg-buildpackage --no-sign
 
 # Move the debs to output
