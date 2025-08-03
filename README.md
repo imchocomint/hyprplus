@@ -11,11 +11,11 @@ The project will be the base for [Repologist](https://worktree.ca/meowniverse/re
 - you name it.
 
 ## Progress
-92%
+87%
 - [x] Refactoring code (there's a similar bash function in each individual build file)
 - [ ] Finding maintainers
 - [ ] Creating a GUI/TUI application
-- [ ] Adding more support
+- [ ] Adding more support: multiple other hypr* tools, rofi-wayland, wallust and so on
 - [ ] Pushing packages to Debian's repositories (once GCC 15 comes to sid)
 
 ## Quirks
