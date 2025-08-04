@@ -1,7 +1,11 @@
 #!/bin/bash
 
 # Define the base URL for the package downloads.
+
 BASE_URL="https://github.com/imchocomint/hyprplus/releases/latest/download/"
+
+# if download is slow, uncomment the next line (and thus comment the one above)
+# BASE_URL="https://sourceforge.net/projects/hyprplus-mirror/files/1.0-patch01/"
 
 # Define all packages to download and install.
 all_packages=(
@@ -104,16 +108,9 @@ DOWNLOAD_DIR="hypr_pkgs"
 mkdir -p "$DOWNLOAD_DIR"
 cd "$DOWNLOAD_DIR" || { echo "Failed to enter download directory."; exit 1; }
 echo "--- Installing dependencies ---"
-sudo apt install \
-libliftoff0 libqt6core6t64 libqt6gui6 libqt6qml6 \
-libqt6quickcontrols2 libqt6widgets6* \ 
-qml6-module-qtquick-* \
-libxcb* \
-libdis86* \
-libdisplay-info* \
-libzip* \ 
-libtomlplusplus* \
-
+sudo apt install libliftoff0 libqt6core6t64 libqt6gui6 libqt6qml6 libqt6quickcontrols2-6 libqt6widgets6* qml6-module-qtquick-* libxcb* libudis86* libdisplay-info2 libzip5 libzip-dev libtomlplusplus* libmagic1t64 libmagic-dev libmagic-mgc libgles2 libre2-dev libre2-11 
+sudo ln -s /usr/lib/x86_64-linux-gnu/libdisplay-info.so.2 /usr/lib/x86_64-linux-gnu/libdisplay-info.so.1
+sudo ldconfig
 echo "--- Starting download of all Hypr* files ---"
 
 for filename in "${all_packages[@]}"; do
@@ -144,7 +141,7 @@ install_and_fix() {
         if [ -f "$pkg" ]; then
             echo "Installing $pkg..."
             # Use sudo to run the installation with elevated privileges.
-            sudo dpkg -i "$pkg"
+            sudo dpkg -i --force-overwrite "$pkg"
         else
             echo "Warning: ${pkg} not found in download directory. Skipping."
         fi
