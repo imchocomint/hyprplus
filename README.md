@@ -3,7 +3,7 @@ Official SourceForge mirror: https://sourceforge.net/projects/hyprplus-mirror/
 Maintained by meoniverse, the team behind LunarXG. Thank you
 
 # hyprplus
-Project Hyprplus is bringing Hyprland packages (Hyprland and its dependencies) to Debian in the form of native .deb packages
+Project Hyprplus is bringing Hyprland packages (Hyprland and its dependencies) to Debian (mainly sid (unstable)) in the form of native .deb packages
 
 All code is taken, and modified, from PikaOS' [Git repository](https://git.pika-os.com/explore/repos). Big thanks to them.
 
@@ -49,8 +49,7 @@ sudo bash ./bootstrap.sh
 Should only be used after installing the packages (this is not an install script since without the .deb packages the build process is broken).
 ```
 git clone https://github.com/imchocomint/hyprplus
-cd hyprplus
-cd build
+cd ./hyprplus/build
 sudo ./init.sh
 ```
 All dependencies are installed in the build scripts
