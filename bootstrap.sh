@@ -153,8 +153,6 @@ install_and_fix() {
     echo "Dependency fix attempt complete for ${group_name}."
 }
 
-# --- Install packages in the new, specified order ---
-# This section now installs the packages in the order you requested.
 install_and_fix hyprutils_packages "libhyprutils"
 install_and_fix hyprlang_packages "libhyprlang"
 install_and_fix hyprgraphics_packages "libhyprgraphics"
@@ -165,6 +163,22 @@ install_and_fix hyprland_qtsupport_packages "hyprland-qt-support"
 install_and_fix hyprland_qtutils_packages "hyprland-qtutils"
 install_and_fix hyprland_packages "hyprland-git"
 install_and_fix xdg_desktop_packages "xdg-desktop-portal-hyprland"
+echo "---- Installation part 1 complete ----"
+sleep 3s
+
+echo "If you see errors related to dpkg while installing packages above, please ignore them"
+echo "The next few seconds will be used to fix them"
+echo "This message will be retained on screen for 10 seconds so you could read and copy the errors if you feel that it is needed"
+
+sleep 10s
+
+echo "Begin installation part 2"
+cd hypr_pkgs
+sudo dpkg -i --force-overwrite *.deb
+sleep 3s
+echo "Installation part 2 complete"
+
 
 echo ""
 echo "--- Installation process complete. ---"
+echo "Thank you for using my script"
