@@ -24,19 +24,14 @@ The project will be the base for [Repologist](https://worktree.ca/meowniverse/re
 
 ## Quirks
 - hyprctl still marks version as 0.50.0; fastfetch didn't; also hyprctl reports that you're on latest commit. If you want to, just compile and install Hyprland from scratch.
-- Slow download speed over GitHub. May move to another host if persists. Please recommend me some good Git services or free file hosting services since Worktree limit to 1GB of all packages for all repos.
+- Slow download speed over GitHub. Mirrored to SourceForge.
 
 ## Guide
 ### Install GCC/G++ 15 and libstdc++15
-#### If you are not on Debian experimental/LunarXG Rolling Tidal
-For GCC 15, refer to [this](https://github.com/imchocomint/Hyprbian#install-gcc-15-not-applicable-to-experimental).
-
-For libstdc++15, refer to [this](https://github.com/imchocomint/Hyprbian#install-libstdc15).
-
 #### If you are on Debian experimental/LunarXG Rolling Tidal
 Installed on default. Don't worry.
 
-#### If you are on Debian sid
+#### If you are on Debian sid/any other Debian 13-based distros
 Add experimental repos to system repos. Then install GCC 15 (gcc-15) and G++ 15 (g++-15) via APT.
 
 ### Install
