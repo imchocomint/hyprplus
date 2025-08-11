@@ -7,8 +7,6 @@ Project Hyprplus is bringing Hyprland packages (Hyprland and its dependencies) t
 
 All code is taken, and modified, from PikaOS' [Git repository](https://git.pika-os.com/explore/repos). Big thanks to them.
 
-The project will be the base for [Repologist](https://worktree.ca/meowniverse/repologist).
-
 ## Advantages over building manually
 - Easily removable and also easier for pushing to Debian's repository
 - Can deploy to multiple setups
@@ -37,10 +35,14 @@ Installed on default. Don't worry.
 Add unstable repo to system repos. Then install GCC 15 (gcc-15) and G++ 15 (g++-15) via APT.
 
 ### Install
+# Important: if you installed Hyprland from this repo before Monday, August 11 GMT +7 and never updated, you should boot to tty or other desktop environment/windows manager and remove these packages: `hyprland-git hyprland-git-dbgsym` and rerun the install script.
 ```
 wget https://raw.githubusercontent.com/imchocomint/hyprplus/refs/heads/main/bootstrap.sh
 sudo bash ./bootstrap.sh
 ```
+
+#### For hyprland-git
+Install all the required dependencies, then build the packages with the init.sh file pointed to /hyprland-git/ directory instead of /hyprland/.
 
 ## Build
 Should only be used after installing the packages (this is not an install script since without the .deb packages the build process is broken).
@@ -54,6 +56,9 @@ All dependencies are installed in the build scripts
 ## QnA
 ### Package naming?
 You can delete the rename script on the build script if you want to release on distros.
+
+### Why are there two version of Hyprland?
+[answer here](https://github.com/imchocomint/hyprplus/blob/main/tagged-vs-git.md)
 
 #
 Thanks!
