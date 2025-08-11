@@ -22,10 +22,10 @@ The project will be the base for [Repologist](https://worktree.ca/meowniverse/re
 - [ ] Make installing -dev and -dbgsym packages completely optional
 - [ ] Adding more support: multiple other hypr* tools, rofi-wayland, wallust and so on
 - [ ] Pushing packages to Debian's repositories ~~(once GCC 15 comes to sid)~~ yay
-- [ ] making hyprland-git a source-only package; replace it with hyprland tagged release
+- [ ] making hyprland-git a source-only package; ~~replace it with hyprland tagged release~~ done
 
 ## Quirks
-- hyprctl still marks version as 0.50.0; fastfetch didn't; also hyprctl reports that you're on latest commit. If you want to, just compile and install Hyprland from scratch.
+- (hyprland-git) hyprctl still marks version as 0.50.0; fastfetch didn't; also hyprctl reports that you're on latest commit. If you want to, just compile and install Hyprland from scratch. Fixed in Hyprland tagged release.
 - Slow download speed over GitHub. Mirrored to SourceForge.
 
 ## Guide
