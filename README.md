@@ -3,7 +3,7 @@ Official SourceForge mirror: https://sourceforge.net/projects/hyprplus-mirror/
 Maintained by meoniverse, the team behind LunarXG. Thank you
 
 # hyprplus
-Project Hyprplus is bringing Hyprland packages (Hyprland and its dependencies) to Debian (mainly sid (unstable)) in the form of native .deb packages
+Project Hyprplus is bringing Hyprland packages (Hyprland and its dependencies) to Debian in the form of native .deb packages
 
 All code is taken, and modified, from PikaOS' [Git repository](https://git.pika-os.com/explore/repos). Big thanks to them.
 
@@ -15,12 +15,14 @@ The project will be the base for [Repologist](https://worktree.ca/meowniverse/re
 - you name it.
 
 ## Progress
-87%
-- [x] Refactoring code (there's a similar bash function in each individual build file)
+85%
+- [ ] Refactoring code (there's a similar bash function in each individual build file)
 - [ ] Finding maintainers
 - [ ] Creating a GUI/TUI application
+- [ ] Make installing -dev and -dbgsym packages completely optional
 - [ ] Adding more support: multiple other hypr* tools, rofi-wayland, wallust and so on
-- [ ] Pushing packages to Debian's repositories (once GCC 15 comes to sid)
+- [ ] Pushing packages to Debian's repositories ~~(once GCC 15 comes to sid)~~ yay
+- [ ] making hyprland-git a source-only package; replace it with hyprland tagged release
 
 ## Quirks
 - hyprctl still marks version as 0.50.0; fastfetch didn't; also hyprctl reports that you're on latest commit. If you want to, just compile and install Hyprland from scratch.
@@ -28,11 +30,11 @@ The project will be the base for [Repologist](https://worktree.ca/meowniverse/re
 
 ## Guide
 ### Install GCC/G++ 15 and libstdc++15
-#### If you are on Debian experimental/LunarXG Rolling Tidal
+#### If you are on Debian sid/experimental/LunarXG Rolling Tidal
 Installed on default. Don't worry.
 
-#### If you are on Debian sid/any other Debian 13-based distros
-Add experimental repos to system repos. Then install GCC 15 (gcc-15) and G++ 15 (g++-15) via APT.
+#### If you are on Debian 13/any other Debian 13-based distros
+Add unstable repo to system repos. Then install GCC 15 (gcc-15) and G++ 15 (g++-15) via APT.
 
 ### Install
 ```
