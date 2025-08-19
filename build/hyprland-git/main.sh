@@ -30,16 +30,15 @@ source ./build-config.sh
 echo "$PIKA_BUILD_ARCH" > pika-build-arch
 
 # Clone Upstream
-git clone --recurse-submodules https://github.com/hyprwm/hyprland 
-cp -rvf ./debian ./hyprland/
-cd ./hyprland
+git clone --recurse-submodules https://github.com/hyprwm/hyprland hyprland-0.50.1git
+cp -rvf ./debian ./hyprland-0.50.1git/
+cd ./hyprland-0.50.1git
 
 # Get build deps
 apt-get build-dep ./ -y
 
 # Build package
-LOGNAME=root dh_make -n -y -l -p hyprland-git_latest || echo "dh-make: Ignoring Last Error"
-dpkg-buildpackage --no-sign
+dpkg-buildpackage -S -us -uc
 
 # Move the debs to output
 cd ../
