@@ -16,11 +16,11 @@ All code is taken, and modified, from PikaOS' [Git repository](https://git.pika-
 85%
 - [ ] Refactoring code (there's a similar bash function in each individual build file)
 - [ ] Finding maintainers
-- [ ] Creating a GUI/TUI application
+- [ ] Creating a GUI/TUI application (hyst now in alpha)
 - [ ] Make installing -dev and -dbgsym packages completely optional
 - [ ] Adding more support: multiple other hypr* tools, rofi-wayland, wallust and so on
 - [ ] Pushing packages to Debian's repositories ~~(once GCC 15 comes to sid)~~ yay
-- [ ] making hyprland-git a source-only package; ~~replace it with hyprland tagged release~~ done
+- [x] making hyprland-git a source-only package
 
 ## Quirks
 - (hyprland-git) hyprctl still marks version as 0.50.0; fastfetch didn't; also hyprctl reports that you're on latest commit. If you want to, just compile and install Hyprland from scratch. Fixed in Hyprland tagged release.
