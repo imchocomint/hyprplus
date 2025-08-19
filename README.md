@@ -17,7 +17,7 @@ All code is taken, and modified, from PikaOS' [Git repository](https://git.pika-
 - [ ] Refactoring code (there's a similar bash function in each individual build file)
 - [ ] Finding maintainers
 - [ ] Creating a GUI/TUI application (hyst now in alpha)
-- [ ] Make installing -dev and -dbgsym packages completely optional
+- [x] Make installing -dev and -dbgsym packages completely optional
 - [ ] Adding more support: multiple other hypr* tools, rofi-wayland, wallust and so on
 - [ ] Pushing packages to Debian's repositories ~~(once GCC 15 comes to sid)~~ yay
 - [x] making hyprland-git a source-only package
