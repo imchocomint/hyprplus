@@ -2,7 +2,7 @@
 
 set -e
 
-VERSION="0.50.1git"
+VERSION="0.51.0git"
 
 function check_architecture() {
     local arch=$(uname -m)
