@@ -8,7 +8,7 @@ def mirror():
     print("2. GitHub (slower speed, always updated)")
     choice = input("Enter 1 or 2: ")
     if choice == '1':
-        mirror_url = "https://sourceforge.net/projects/hyprplus-mirror/files/1.0-patch02/"
+        mirror_url = "https://sourceforge.net/projects/hyprplus-mirror/files/1.0-0.51.0/"
     elif choice == '2':
         mirror_url = "https://github.com/imchocomint/hyprplus/releases/latest/download/"
     else:

@@ -43,6 +43,6 @@ dpkg-buildpackage --no-sign
 
 # Move the debs to output
 cd ../
-sudo rm -rf hyprland-qt-support
+sudo rm -rf ./hyprland-qt-support
 cd ../
-mv ./hyprland-qtsupport/*.deb ../
+mv ./hyprland-qtsupport/*.deb ./
