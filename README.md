@@ -17,13 +17,13 @@ All code is taken, and modified, from PikaOS' [Git repository](https://git.pika-
 - [ ] Refactoring code (there's a similar bash function in each individual build file)
 - [ ] Finding maintainers
 - [ ] Creating a GUI/TUI application (hyst now in alpha)
-- [x] Make installing -dev and -dbgsym packages completely optional
-- [ ] Adding more support: multiple other hypr* tools, rofi-wayland, wallust and so on
-- [ ] Pushing packages to Debian's repositories ~~(once GCC 15 comes to sid)~~ yay
+- [x] Make installing -dev and -dbgsym packages completely optional (only via hyst)
+- [ ] Adding more support: multiple other hypr* tools, ~~rofi-wayland~~ deprecated, use the classic rofi instead, wallust and so on
+- [ ] Pushing packages to Debian's repositories
 - [x] making hyprland-git a source-only package
 
 ## Quirks
-- (hyprland-git) hyprctl still marks version as 0.50.0; fastfetch didn't; also hyprctl reports that you're on latest commit. If you want to, just compile and install Hyprland from scratch. Fixed in Hyprland tagged release.
+- (hyprland-git) hyprctl reports one version behind; fastfetch didn't; also hyprctl reports that you're on latest commit. If you want to, just compile and install Hyprland from scratch. Fixed in Hyprland tagged release.
 - Slow download speed over GitHub. Mirrored to SourceForge.
 
 ## Guide
@@ -35,7 +35,7 @@ Installed on default. Don't worry.
 Add unstable repo to system repos. Then install GCC 15 (gcc-15) and G++ 15 (g++-15) via APT.
 
 ### Install
-# Important: if you installed Hyprland from this repo before Monday, August 11 GMT +7 and never updated, you should boot to tty or other desktop environment/windows manager and remove these packages: `hyprland-git hyprland-git-dbgsym` and rerun the install script.
+# Important: if you installed Hyprland from this repo before Monday, August 11 2025 GMT +7 and never updated, you should boot to tty or other desktop environment/windows manager and remove these packages: `hyprland-git hyprland-git-dbgsym` and rerun the install script.
 ```
 wget https://raw.githubusercontent.com/imchocomint/hyprplus/refs/heads/main/bootstrap.sh
 sudo bash ./bootstrap.sh
@@ -45,7 +45,7 @@ sudo bash ./bootstrap.sh
 Install all the required dependencies, then build the packages with the init.sh file pointed to /hyprland-git/ directory instead of /hyprland/.
 
 ## Build
-Should only be used after installing the packages (this is not an install script since without the .deb packages the build process is broken).
+Should only be used after installing the packages (this is not an install script since without the required development packages the build process is broken).
 ```
 git clone https://github.com/imchocomint/hyprplus
 cd ./hyprplus/build
