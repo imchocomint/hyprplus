@@ -2,7 +2,7 @@
 
 set -e
 
-VERSION="0.51.0"
+VERSION="0.51.1"
 
 function check_architecture() {
     local arch=$(uname -m)
