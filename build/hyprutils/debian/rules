@@ -21,9 +21,9 @@ override_dh_install:
 	DESTDIR=debian/tmp cmake --install build
 	dh_install
 	rm -rfv debian/libhyprutils/usr/lib/*/pkgconfig/hyprutils.pc
-	cp debian/libhyprutils/usr/lib/x86_64-linux-gnu/libhyprutils.so.0.8.2 debian/libhyprutils/usr/lib/x86_64-linux-gnu/libhyprutils.so.1
-	cp debian/libhyprutils/usr/lib/x86_64-linux-gnu/libhyprutils.so.0.8.2 debian/libhyprutils/usr/lib/x86_64-linux-gnu/libhyprutils.so.4
-	cp debian/libhyprutils/usr/lib/x86_64-linux-gnu/libhyprutils.so.0.8.2 debian/libhyprutils/usr/lib/x86_64-linux-gnu/libhyprutils.so.5
+	cp debian/libhyprutils/usr/lib/x86_64-linux-gnu/libhyprutils.so.0.8.4 debian/libhyprutils/usr/lib/x86_64-linux-gnu/libhyprutils.so.1
+	cp debian/libhyprutils/usr/lib/x86_64-linux-gnu/libhyprutils.so.0.8.4 debian/libhyprutils/usr/lib/x86_64-linux-gnu/libhyprutils.so.4
+	cp debian/libhyprutils/usr/lib/x86_64-linux-gnu/libhyprutils.so.0.8.4 debian/libhyprutils/usr/lib/x86_64-linux-gnu/libhyprutils.so.5
 ## === End end of region ===
 override_dh_shlibdeps:
 	# Create an empty shlibs dependency file for libhyprutils
