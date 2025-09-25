@@ -43,7 +43,7 @@ sudo bash ./bootstrap.sh
 ```
 
 #### For hyprland-git
-Install all the required dependencies, then build the packages with the init.sh file pointed to /hyprland-git/ directory instead of /hyprland/.
+Install all the required dependencies, then build the packages with the init.sh file pointed to /hyprland-git/ directory instead of /hyprland/. Then install like any normal deb-src package.
 
 ## Build
 Should only be used after installing the packages (this is not an install script since without the required development packages the build process is broken).
