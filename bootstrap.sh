@@ -6,7 +6,7 @@ BASE_URL="https://github.com/imchocomint/hyprplus/releases/latest/download/"
 
 
 # if download is slow, uncomment the next line (and thus comment the one above)
-# BASE_URL="https://sourceforge.net/projects/hyprplus-mirror/files/1.0-0.51.1/"
+# BASE_URL="https://sourceforge.net/projects/hyprplus-mirror/files/1.0-0.51.1-hf2/"
 
 # Define all packages to download and install.
 all_packages=(

@@ -23,6 +23,7 @@ All code is taken, and modified, from PikaOS' [Git repository](https://git.pika-
 - [x] making hyprland-git a source-only package
 
 ## Quirks
+All bugs should be reported in Issues. This is for minor inconvenience.
 - (hyprland-git) hyprctl reports one version behind; fastfetch didn't; also hyprctl reports that you're on latest commit. If you want to, just compile and install Hyprland from scratch. Fixed in Hyprland tagged release.
 - Slow download speed over GitHub. Mirrored to SourceForge.
 
@@ -42,7 +43,7 @@ sudo bash ./bootstrap.sh
 ```
 
 #### For hyprland-git
-Install all the required dependencies, then build the packages with the init.sh file pointed to /hyprland-git/ directory instead of /hyprland/.
+Install all the required dependencies, then build the packages with the init.sh file pointed to /hyprland-git/ directory instead of /hyprland/. Then install like any normal deb-src package.
 
 ## Build
 Should only be used after installing the packages (this is not an install script since without the required development packages the build process is broken).
