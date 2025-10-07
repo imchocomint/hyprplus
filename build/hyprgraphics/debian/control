@@ -15,6 +15,7 @@ Build-Depends: debhelper-compat (= 13),
                libwebp-dev,
                libjpeg-dev,
                libspng-dev,
+               librsvg,
 Rules-Requires-Root: no
 
 Package: libhyprgraphics

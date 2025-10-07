@@ -2,7 +2,7 @@
 
 set -e
 
-VERSION="0.8.2"
+VERSION="0.10.0"
 function check_architecture() {
     local arch=$(uname -m)
     if [[ "$arch" == "x86_64" ]]; then
