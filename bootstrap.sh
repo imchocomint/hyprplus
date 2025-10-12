@@ -50,8 +50,8 @@ hyprutils_packages=(
 )
 
 hyprland_packages=(
-    "hyprland-git-latest.deb"
-    "hyprland-git-dbgsym-latest.deb"
+    "hyprland-latest.deb"
+    "hyprland-dbgsym-latest.deb"
 )
 
 hyprcursor_packages=(
@@ -162,7 +162,7 @@ install_and_fix aquamarine_packages "aquamarine"
 install_and_fix hyprwayland_scanner_packages "hyprwayland-scanner"
 install_and_fix hyprland_qtsupport_packages "hyprland-qt-support"
 install_and_fix hyprland_qtutils_packages "hyprland-qtutils"
-install_and_fix hyprland_packages "hyprland-git"
+install_and_fix hyprland_packages "hyprland"
 install_and_fix xdg_desktop_packages "xdg-desktop-portal-hyprland"
 echo "---- Installation part 1 complete ----"
 sleep 3s
