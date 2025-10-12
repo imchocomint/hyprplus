@@ -12,6 +12,11 @@ All code is taken, and modified, from PikaOS' [Git repository](https://git.pika-
 - Can deploy to multiple setups
 - you name it.
 
+## Notes for sid user
+- some people already uploaded newer hypr* packages to Debian sid repo. These include libhyprutils (and its development libraries), libhyprland (and its development dependencies), libhyprgraphics (same as above), libhyprcursor (same as above), hyprwayland-scanner (same as above) and the XDG portal for Hyprland (same as above).
+- However, Hyprland itself is still 10 versions behind, and some crucial packages are not available e.g. aquamarine.
+- You can choose to install these packages from the repo or from here; they are the same.
+
 ## Progress
 85%
 - [ ] Refactoring code (there's a similar bash function in each individual build file)
@@ -19,7 +24,7 @@ All code is taken, and modified, from PikaOS' [Git repository](https://git.pika-
 - [ ] Creating a GUI/TUI application (hyst now in alpha)
 - [x] Make installing -dev and -dbgsym packages completely optional (only via hyst)
 - [ ] Adding more support: multiple other hypr* tools, ~~rofi-wayland~~ deprecated, use the classic rofi instead, wallust and so on
-- [ ] Pushing packages to Debian's repositories
+- [ ] Pushing packages to Debian's repositories (some people have done this - yay!)
 - [x] making hyprland-git a source-only package
 
 ## Quirks
