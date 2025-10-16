@@ -2,6 +2,11 @@ Official SourceForge mirror: https://sourceforge.net/projects/hyprplus-mirror/
 
 Maintained by meoniverse, the team behind LunarXG. Thank you
 
+# Notice
+We'll retire some components because someone have been updating the packages on sid repo; also Ubuntu 25.10 repo now have hyprland (latest tagged version).
+
+However Hyprland itself, as well as its Qt tools never got updated. We'll continue to build those packages.
+
 # hyprplus
 Project Hyprplus is bringing Hyprland packages (Hyprland and its dependencies) to Debian in the form of native .deb packages
 
