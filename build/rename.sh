@@ -1,9 +1,2 @@
-rename 's/^(libhypr(lang|utils|wayland-scanner|cursor|graphics))(.*)\.deb$/$1-latest.deb/' *.deb
-rename 's/^(aquamarine)(.*)\.deb$/$1-latest.deb/' *.deb
-rename 's/^(aquamarine-dbgsym)(.*)\.deb$/$1-latest.deb/' *.deb
-rename 's/^(libhypr(lang|utils|cursor|graphics)-(d(ev|bgsym)))(.*)\.deb$/$1-latest.deb/' *.deb
-rename 's/^(libaquamarine-dev)(.*)\.deb$/$1-latest.deb/' *.deb
-rename 's/^(hypr(wayland-scanner|cursor-util|land|land-qtutils|land-qt-support)-dbgsym)(.*)\.deb$/$1-latest.deb/' *.deb
-rename 's/^(hypr(wayland-scanner|cursor-util|land|land-qtutils|land-qt-support))(.*)\.deb$/$1-latest.deb/' *.deb
-rename 's/^(xdg-desktop-portal-hyprland)(.*)\.deb$/$1-latest.deb/' *.deb
-rename 's/^(xdg-desktop-portal-hyprland-(d(ev|bgsym)))(.*)\.deb$/$1-latest.deb/' *.deb
+rename 's/^(hypr(land|land-qtutils|land-qt-support)-dbgsym)(.*)\.deb$/$1-latest.deb/' *.deb
+rename 's/^(hypr(land|land-qtutils|land-qt-support))(.*)\.deb$/$1-latest.deb/' *.deb
