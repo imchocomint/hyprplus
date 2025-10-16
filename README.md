@@ -19,17 +19,16 @@ All code is taken, and modified, from PikaOS' [Git repository](https://git.pika-
 
 ## Notes for sid user
 - some people already uploaded newer hypr* packages to Debian sid repo. These include libhyprutils (and its development libraries), libhyprland (and its development dependencies), libhyprgraphics (same as above), libhyprcursor (same as above), hyprwayland-scanner (same as above) and the XDG portal for Hyprland (same as above).
-- However, Hyprland itself is still 10 versions behind, and some crucial packages are not available e.g. aquamarine.
-- You can choose to install these packages from the repo or from here; they are the same.
+- However, Hyprland itself is still 10 versions behind, and some crucial packages are not available e.g. Qt tools.
 
 ## Progress
-85%
+90%
 - [ ] Refactoring code (there's a similar bash function in each individual build file)
 - [ ] Finding maintainers
 - [ ] Creating a GUI/TUI application (hyst now in alpha)
-- [x] Make installing -dev and -dbgsym packages completely optional (only via hyst)
-- [ ] Adding more support: multiple other hypr* tools, ~~rofi-wayland~~ deprecated, use the classic rofi instead, wallust and so on
-- [ ] Pushing packages to Debian's repositories (some people have done this - yay!)
+- [x] ~~Make installing -dev and -dbgsym packages completely optional~~ We've retired the packages. Some packages we now offers have -dbgsym subpackages; they will still be optional
+- [x] This used to be "support other hypr* tools and Wayland utilities". However, most hypr* tools are already uploaded on sid repo. Other Wayland utilities are at https://github.com/imchocomint/wayland-tools-debian
+- [ ] Pushing packages to Debian's repositories (the only packages left are hyprland (currently 10 versions behind) and Qt tools)
 - [x] making hyprland-git a source-only package
 
 ## Quirks
@@ -47,14 +46,19 @@ Add unstable repo to system repos. Then install GCC 15 (gcc-15) and G++ 15 (g++-
 
 ### Install
 # Important: if you installed Hyprland from this repo before Monday, August 11 2025 GMT +7 and never updated, you should boot to tty or other desktop environment/windows manager and remove these packages: `hyprland-git hyprland-git-dbgsym` and rerun the install script.
+# Important 2: if you installed Hyprland from this repo before Thursday, October 16 2025 GMT +7 and never updated, you should do a system upgrade (which removes and reinstalls hyprland dependencies) and reinstall from here
+
+## One-script install (currently broken)
 ```
 wget https://raw.githubusercontent.com/imchocomint/hyprplus/refs/heads/main/bootstrap.sh
 sudo bash ./bootstrap.sh
 ```
 
-#### For hyprland-git
-Install all the required dependencies, then build the packages with the init.sh file pointed to /hyprland-git/ directory instead of /hyprland/. Then install like any normal deb-src package.
+## Via hyst (currently updating)
+## Manually
+Go to Releases and download all* packages. First install the dependencies (tba). Then install hyprland-qt-uitls and hyprland-qt-support, then install Hyprland.
 
+* You may skip packages that end with '-dbgsym'.
 ## Build
 Should only be used after installing the packages (this is not an install script since without the required development packages the build process is broken).
 ```
@@ -63,6 +67,10 @@ cd ./hyprplus/build
 sudo ./init.sh
 ```
 All dependencies are installed in the build scripts
+
+
+#### For hyprland-git
+Install all the required dependencies, then build the packages with the init.sh file pointed to /hyprland-git/ directory instead of /hyprland/. Then install like any normal deb-src package.
 
 ## QnA
 ### Package naming?
