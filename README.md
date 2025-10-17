@@ -5,6 +5,8 @@ Maintained by meoniverse, the team behind LunarXG. Thank you
 # Notice
 We'll retire some components because someone have been updating the packages on sid repo; also Ubuntu 25.10 repo now have hyprland (latest tagged version).
 
+Some dependencies will be slow to update, and will not work with the latest version of Hyprland. You should check this page regularly for notices.
+
 However Hyprland itself, as well as its Qt tools never got updated. We'll continue to build those packages.
 
 # hyprplus
@@ -36,7 +38,7 @@ All bugs should be reported in Issues. This is for minor inconvenience.
 - (hyprland-git) hyprctl reports one version behind; fastfetch didn't; also hyprctl reports that you're on latest commit. If you want to, just compile and install Hyprland from scratch. Fixed in Hyprland tagged release.
 - Slow download speed over GitHub. Mirrored to SourceForge.
 
-## Guide
+## Before installation
 ### Install GCC/G++ 15 and libstdc++15
 #### If you are on Debian sid/experimental/LunarXG Rolling Tidal
 Installed on default. Don't worry.
@@ -44,11 +46,11 @@ Installed on default. Don't worry.
 #### If you are on Debian 13/any other Debian 13-based distros
 Add unstable repo to system repos. Then install GCC 15 (gcc-15) and G++ 15 (g++-15) via APT.
 
-### Install
+## Install
 # Important: if you installed Hyprland from this repo before Monday, August 11 2025 GMT +7 and never updated, you should boot to tty or other desktop environment/windows manager and remove these packages: `hyprland-git hyprland-git-dbgsym` and rerun the install script.
 # Important 2: if you installed Hyprland from this repo before Thursday, October 16 2025 GMT +7 and never updated, you should do a system upgrade (which removes and reinstalls hyprland dependencies) and reinstall from here
 
-## One-script install (currently broken)
+## One-script install
 ```
 wget https://raw.githubusercontent.com/imchocomint/hyprplus/refs/heads/main/bootstrap.sh
 sudo bash ./bootstrap.sh
@@ -58,18 +60,12 @@ sudo bash ./bootstrap.sh
 ## Manually
 Go to Releases and download all* packages. First install the dependencies (tba). Then install hyprland-qt-uitls and hyprland-qt-support, then install Hyprland.
 
-* You may skip packages that end with '-dbgsym'.
-## Build
-Should only be used after installing the packages (this is not an install script since without the required development packages the build process is broken).
-```
-git clone https://github.com/imchocomint/hyprplus
-cd ./hyprplus/build
-sudo ./init.sh
-```
-All dependencies are installed in the build scripts
+- * You may skip packages that end with '-dbgsym'.
 
+## Build (broken)
+The building process is being reworked to fit the current release model. Please come back later.
 
-#### For hyprland-git
+### For hyprland-git
 Install all the required dependencies, then build the packages with the init.sh file pointed to /hyprland-git/ directory instead of /hyprland/. Then install like any normal deb-src package.
 
 ## QnA
