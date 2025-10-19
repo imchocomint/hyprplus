@@ -9,6 +9,8 @@ Some dependencies will be slow to update, and will not work with the latest vers
 
 However Hyprland itself, as well as its Qt tools never got updated. We'll continue to build those packages.
 
+Also please check this out: https://github.com/cpiber/hyprland-ppa. This is for Ubuntu (>=25.10). 
+
 # hyprplus
 Project Hyprplus is bringing Hyprland packages (Hyprland and its dependencies) to Debian in the form of native .deb packages
 
