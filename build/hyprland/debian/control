@@ -79,7 +79,7 @@ Depends: fontconfig,
          libdisplay-info2,
          hyprwayland-scanner,
          libhyprcursor0,
-         hyprland-guiutils,
+         hyprland-qtutils,
          hyprlang,
          libliftoff0,
 Provides: Hyprland, hyprctl
