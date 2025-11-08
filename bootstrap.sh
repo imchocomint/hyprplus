@@ -12,8 +12,8 @@ all_packages=(
     "hyprland-latest.deb"
     "hyprland-qt-support-dbgsym-latest.deb"
     "hyprland-qt-support-latest.deb"    
-    "hyprland-qtutils-dbgsym-latest.deb"
-    "hyprland-qtutils-latest.deb"
+    "hyprland-guiutils-dbgsym-latest.deb"
+    "hyprland-guiutils-latest.deb"
 )
 
 
@@ -22,9 +22,9 @@ hyprland_packages=(
     "hyprland-dbgsym-latest.deb"
 )
 
-hyprland_qtutils_packages=(
-    "hyprland-qtutils-latest.deb"
-    "hyprland-qtutils-dbgsym-latest.deb"
+hyprland_guiutils_packages=(
+    "hyprland-guiutils-latest.deb"
+    "hyprland-guiutils-dbgsym-latest.deb"
 )
 
 hyprland_qtsupport_packages=(
@@ -81,7 +81,7 @@ install_and_fix() {
 
 sudo apt install libhyprcursor libhyprutils libhyprlang libhyprgraphics hyprland-protocols hyprwayland-scanner xdg-desktop-portal-hyprland libaquamarine
 install_and_fix hyprland_qtsupport_packages "hyprland-qt-support"
-install_and_fix hyprland_qtutils_packages "hyprland-qtutils"
+install_and_fix hyprland_guiutils_packages "hyprland-guiutils"
 install_and_fix hyprland_packages "hyprland"
 
 echo ""
