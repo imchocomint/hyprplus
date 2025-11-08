@@ -67,6 +67,9 @@ Go to Releases and download all* packages. First install the dependencies (tba).
 ## Build (broken)
 The building process is being reworked to fit the current release model. Please come back later.
 
+### Packages in 'legacy'
+These packages were dependencies for Hyprland, but they are now available and maintained on Debian repo. Once no one maintain them, these will be pulled out of legacy and updated.
+
 ### For hyprland-git
 Install all the required dependencies, then build the packages with the init.sh file pointed to /hyprland-git/ directory instead of /hyprland/. Then install like any normal deb-src package.
 
