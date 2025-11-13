@@ -4,4 +4,3 @@ sudo apt install dh-make build-essential git make python3 binutils perl tar gzip
 sudo ./hyprland-qtsupport/main.sh "$@"
 sudo ./hyprland-qtutils/main.sh "$@"
 sudo ./hyprland/main.sh "$@"
-bash rename.sh
