@@ -9,6 +9,8 @@ Some dependencies will be slow to update, and will not work with the latest vers
 
 However Hyprland itself, as well as its Qt tools never got updated. We'll continue to build those packages.
 
+We will not package hyprtoolkit. Future releases will not have the donation pop-up and such. However if Hyprland malfunctions I will try my best to package it.
+
 Also please check this out: https://github.com/cpiber/hyprland-ppa. This is for Ubuntu (>=25.10). 
 
 # hyprplus
@@ -20,10 +22,6 @@ All code is taken, and modified, from PikaOS' [Git repository](https://git.pika-
 - Easily removable and also easier for pushing to Debian's repository
 - Can deploy to multiple setups
 - you name it.
-
-## Notes for sid user
-- some people already uploaded newer hypr* packages to Debian sid repo. These include libhyprutils (and its development libraries), libhyprland (and its development dependencies), libhyprgraphics (same as above), libhyprcursor (same as above), hyprwayland-scanner (same as above) and the XDG portal for Hyprland (same as above).
-- However, Hyprland itself is still 10 versions behind, and some crucial packages are not available e.g. Qt tools.
 
 ## Progress
 90%
