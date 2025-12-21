@@ -1,3 +1,5 @@
+# TEMPORARILY STOPPING DEVELOPMENT (DEBIAN REPO ALREADY HAVE THOSE). THANK YOU
+
 Official SourceForge mirror: https://sourceforge.net/projects/hyprplus-mirror/
 
 Maintained by meoniverse, the team behind LunarXG. Thank you
