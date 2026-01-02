@@ -1,0 +1,29 @@
+Source: hyprwire
+Section: main
+Priority: optional
+Maintainer: ferrreo <harderthanfire@gmail.com>
+Standards-Version: 4.6.1
+Build-Depends: debhelper-compat (= 13),
+               cmake-extras,
+               cmake,
+               libpugixml-dev,
+               libhyprutils-dev
+Rules-Requires-Root: no
+
+Package: libhyprwire
+Architecture: linux-any
+Depends:
+         ${shlibs:Depends},
+         ${misc:Depends},
+         libhyprutils
+Provides: hyprwire (= ${binary:Version})
+Description: The Hypr wire protocol library
+
+Package: libhyprwire-dev
+Architecture: linux-any
+Depends:
+         ${shlibs:Depends},
+         ${misc:Depends},
+         libhyprwire (= ${binary:Version}),
+Provides: hyprwire-dev (= ${binary:Version})
+Description: Development files for the Hypr wire protocol library
