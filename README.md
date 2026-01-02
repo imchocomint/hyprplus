@@ -1,4 +1,5 @@
-# TEMPORARILY STOPPING DEVELOPMENT (DEBIAN REPO ALREADY HAVE THOSE). THANK YOU
+# ~~TEMPORARILY STOPPING DEVELOPMENT (DEBIAN REPO ALREADY HAVE THOSE). THANK YOU~~
+# LMAO THEY SUMMONED ME BACK SINCE HYPRWIRE IS STILL STUCK
 
 Official SourceForge mirror: https://sourceforge.net/projects/hyprplus-mirror/
 
@@ -9,11 +10,11 @@ We'll retire some components because someone have been updating the packages on 
 
 Some dependencies will be slow to update, and will not work with the latest version of Hyprland. You should check this page regularly for notices.
 
-However Hyprland itself, as well as its Qt tools never got updated. We'll continue to build those packages.
+~~However Hyprland itself, as well as its Qt tools never got updated. We'll continue to build those packages.~~
+
+The above line used to be wrong, but now hyprland update on Debian is stagnated so we're here.
 
 We will not package hyprtoolkit. Future releases will not have the donation pop-up and such. However if Hyprland malfunctions I will try my best to package it.
-
-Also please check this out: https://github.com/cpiber/hyprland-ppa. This is for Ubuntu (>=25.10). 
 
 # hyprplus
 Project Hyprplus is bringing Hyprland packages (Hyprland and its dependencies) to Debian in the form of native .deb packages
@@ -32,26 +33,17 @@ All code is taken, and modified, from PikaOS' [Git repository](https://git.pika-
 - [ ] Creating a GUI/TUI application (hyst now in alpha)
 - [x] ~~Make installing -dev and -dbgsym packages completely optional~~ We've retired the packages. Some packages we now offers have -dbgsym subpackages; they will still be optional
 - [x] This used to be "support other hypr* tools and Wayland utilities". However, most hypr* tools are already uploaded on sid repo. Other Wayland utilities are at https://github.com/imchocomint/wayland-tools-debian
-- [ ] Pushing packages to Debian's repositories (the only packages left are hyprland (currently 10 versions behind) and Qt tools)
-- [x] making hyprland-git a source-only package
+- [x] Checked because Hyprland now is available on sid repo.
 
 ## Quirks
 All bugs should be reported in Issues. This is for minor inconvenience.
-- (hyprland-git) hyprctl reports one version behind; fastfetch didn't; also hyprctl reports that you're on latest commit. If you want to, just compile and install Hyprland from scratch. Fixed in Hyprland tagged release.
 - Slow download speed over GitHub. Mirrored to SourceForge.
 
 ## Before installation
-### Install GCC/G++ 15 and libstdc++15
-#### If you are on Debian sid/experimental/LunarXG Rolling Tidal
-Installed on default. Don't worry.
-
-#### If you are on Debian 13/any other Debian 13-based distros
-Add unstable repo to system repos. Then install GCC 15 (gcc-15) and G++ 15 (g++-15) via APT.
+- Make sure your system is running on GCC and G++ 15. Debian sid/forky/experimental and Ubuntu 25.10 already have those. Debian trixie users may have to wait.
+- Nothing much in particular
 
 ## Install
-# Important: if you installed Hyprland from this repo before Monday, August 11 2025 GMT +7 and never updated, you should boot to tty or other desktop environment/windows manager and remove these packages: `hyprland-git hyprland-git-dbgsym` and rerun the install script.
-# Important 2: if you installed Hyprland from this repo before Thursday, October 16 2025 GMT +7 and never updated, you should do a system upgrade (which removes and reinstalls hyprland dependencies) and reinstall from here
-
 ## One-script install
 ```
 wget https://raw.githubusercontent.com/imchocomint/hyprplus/refs/heads/main/bootstrap.sh
@@ -70,15 +62,9 @@ The building process is being reworked to fit the current release model. Please 
 ### Packages in 'legacy'
 These packages were dependencies for Hyprland, but they are now available and maintained on Debian repo. Once no one maintain them, these will be pulled out of legacy and updated.
 
-### For hyprland-git
-Install all the required dependencies, then build the packages with the init.sh file pointed to /hyprland-git/ directory instead of /hyprland/. Then install like any normal deb-src package.
-
 ## QnA
 ### Package naming?
 You can delete the rename script on the build script if you want to release on distros.
-
-### Why are there two version of Hyprland?
-[answer here](https://github.com/imchocomint/hyprplus/blob/main/tagged-vs-git.md)
 
 #
 Thanks!
