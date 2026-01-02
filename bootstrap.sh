@@ -12,8 +12,11 @@ all_packages=(
     "hyprland-latest.deb"
     "hyprland-qt-support-dbgsym-latest.deb"
     "hyprland-qt-support-latest.deb"    
-    "hyprland-guiutils-dbgsym-latest.deb"
-    "hyprland-guiutils-latest.deb"
+    "hyprland-qtutils-dbgsym-latest.deb"
+    "hyprland-qtutils-latest.deb"
+    "libhyprwire-latest.deb"
+    "libhyprwire-dev-latest.deb"
+    "libhyprwire-dbgsym-latest.deb"
 )
 
 
@@ -21,10 +24,15 @@ hyprland_packages=(
     "hyprland-latest.deb"
     "hyprland-dbgsym-latest.deb"
 )
+hyprwire_packages=(
+    "libhyprwire-latest.deb"
+    "libhyprwire-dev-latest.deb"
+    "libhyprwire-dbgsym-latest.deb"
+)
 
-hyprland_guiutils_packages=(
-    "hyprland-guiutils-latest.deb"
-    "hyprland-guiutils-dbgsym-latest.deb"
+hyprland_qtutils_packages=(
+    "hyprland-qtutils-latest.deb"
+    "hyprland-qtutils-dbgsym-latest.deb"
 )
 
 hyprland_qtsupport_packages=(
@@ -79,11 +87,11 @@ install_and_fix() {
     echo "Dependency fix attempt complete for ${group_name}."
 }
 
-sudo apt install libhyprcursor libhyprutils libhyprlang libhyprgraphics hyprland-protocols hyprwayland-scanner xdg-desktop-portal-hyprland libaquamarine
 install_and_fix hyprland_qtsupport_packages "hyprland-qt-support"
-install_and_fix hyprland_guiutils_packages "hyprland-guiutils"
+install_and_fix hyprland_qtutils_packages "hyprland-qtutils"
+install_and_fix hyprwire_packages "hyprwire"
 install_and_fix hyprland_packages "hyprland"
 
 echo ""
 echo "--- Installation process complete. ---"
-echo "Thank you for using my script"
+
