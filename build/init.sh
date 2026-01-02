@@ -5,3 +5,4 @@ sudo ./hyprland-qtsupport/main.sh "$@"
 sudo ./hyprland-qtutils/main.sh "$@"
 sudo ./hyprwire/main.sh "$@"
 sudo ./hyprland/main.sh "$@"
+bash rename.sh
