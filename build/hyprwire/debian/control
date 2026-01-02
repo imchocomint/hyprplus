@@ -1,7 +1,7 @@
 Source: hyprwire
 Section: main
 Priority: optional
-Maintainer: ferrreo <harderthanfire@gmail.com>
+Maintainer: imchocomint <tranthienminh2008@gmail.com>
 Standards-Version: 4.6.1
 Build-Depends: debhelper-compat (= 13),
                cmake-extras,
@@ -15,7 +15,7 @@ Architecture: linux-any
 Depends:
          ${shlibs:Depends},
          ${misc:Depends},
-         libhyprutils
+         libhyprutils10
 Provides: hyprwire (= ${binary:Version})
 Description: The Hypr wire protocol library
 
