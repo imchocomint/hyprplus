@@ -16,6 +16,8 @@ The above line used to be wrong, but now hyprland update on Debian is stagnated 
 
 We will not package hyprtoolkit. Future releases will not have the donation pop-up and such. However if Hyprland malfunctions I will try my best to package it.
 
+hyprwire can be installed either here or by manually compiling [from this repo](https://github.com/imchocomint/hyprwire-debian). They are technically the same; the only differrent is that our packages provides more in one.
+
 # hyprplus
 Project Hyprplus is bringing Hyprland packages (Hyprland and its dependencies) to Debian in the form of native .deb packages
 
@@ -52,7 +54,7 @@ sudo bash ./bootstrap.sh
 
 ## Via hyst (currently updating)
 ## Manually
-Go to Releases and download all* packages. First install the dependencies (tba). Then install hyprland-qt-uitls and hyprland-qt-support, then install Hyprland.
+Go to Releases and download all* packages. Install hyprwire, then hyprland. It will automatically install the missing dependencies.
 
 - * You may skip packages that end with '-dbgsym'.
 
