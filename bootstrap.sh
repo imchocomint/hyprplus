@@ -9,9 +9,7 @@ BASE_URL="https://github.com/imchocomint/hyprplus/releases/latest/download/"
 # Define all packages to download and install.
 all_packages=(
     "hyprland-dbgsym-latest.deb"
-    "hyprland-latest.deb"
-    "hyprland-qt-support-dbgsym-latest.deb"
-    "hyprland-qt-support-latest.deb"    
+    "hyprland-latest.deb"  
     "hyprland-qtutils-dbgsym-latest.deb"
     "hyprland-qtutils-latest.deb"
     "libhyprwire-latest.deb"
@@ -35,10 +33,6 @@ hyprland_qtutils_packages=(
     "hyprland-qtutils-dbgsym-latest.deb"
 )
 
-hyprland_qtsupport_packages=(
-    "hyprland-qt-support-latest.deb"
-    "hyprland-qt-support-dbgsym-latest.deb"
-)
 
 DOWNLOAD_DIR="hyprplus"
 mkdir -p "$DOWNLOAD_DIR"
@@ -87,7 +81,6 @@ install_and_fix() {
     echo "Dependency fix attempt complete for ${group_name}."
 }
 
-install_and_fix hyprland_qtsupport_packages "hyprland-qt-support"
 install_and_fix hyprland_qtutils_packages "hyprland-qtutils"
 install_and_fix hyprwire_packages "hyprwire"
 install_and_fix hyprland_packages "hyprland"
