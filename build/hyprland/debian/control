@@ -62,6 +62,7 @@ Build-Depends:
               libsystemd-dev,
               libhyprcursor-dev,
               libhyprgraphics-dev,
+              qml6-module-org-hyprland-style,
               libhyprlang-dev,
               libhyprutils-dev,
               libxcb-util-dev,
