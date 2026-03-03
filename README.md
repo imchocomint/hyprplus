@@ -1,6 +1,6 @@
-# ~~TEMPORARILY STOPPING DEVELOPMENT (DEBIAN REPO ALREADY HAVE THOSE). THANK YOU~~
-# LMAO THEY SUMMONED ME BACK SINCE HYPRWIRE IS STILL STUCK
-
+# TEMPORARILY STOPPING DEVELOPMENT (DEBIAN REPO ALREADY HAVE THOSE). THANK YOU
+# ~~LMAO THEY SUMMONED ME BACK SINCE HYPRWIRE IS STILL STUCK~~
+# For real this time
 Official SourceForge mirror: https://sourceforge.net/projects/hyprplus-mirror/
 
 Maintained by meoniverse, the team behind LunarXG. Thank you
