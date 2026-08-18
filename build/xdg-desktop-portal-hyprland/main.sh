@@ -2,7 +2,7 @@
 
 set -e
 
-VERSION="0.9.4"
+VERSION="1.4.1"
 
 function check_architecture() {
     local arch=$(uname -m)
@@ -17,7 +17,7 @@ function check_architecture() {
     export COMPUTER_ARCH
 }
 check_architecture
-cd ./aquamarine
+cd ./xdg-desktop-portal-hyprland
 if [[ "$COMPUTER_ARCH" == "amd64" ]]; then
     cp ./build-config/amd64-v3.sh ./build-config.sh
 elif [[ "$COMPUTER_ARCH" == "x86" ]]; then
@@ -29,19 +29,20 @@ source ./build-config.sh
 
 echo "$PIKA_BUILD_ARCH" > pika-build-arch
 
-# Get the source
-git clone --recurse-submodules https://github.com/hyprwm/aquamarine
-cp -rvf ./debian ./aquamarine/
-cd ./aquamarine
+# Clone Upstream
+git clone --depth=1 --recurse-submodules https://github.com/hyprwm/xdg-desktop-portal-hyprland.git
+cp -rvf ./debian ./xdg-desktop-portal-hyprland/
+cd ./xdg-desktop-portal-hyprland
+
 # Get build deps
 apt-get build-dep ./ -y
 
 # Build package
-LOGNAME=root dh_make -n -y -l -p aquamarine_latest || echo "dh-make: Ignoring Last Error"
+LOGNAME=root dh_make -n -y -l -p xdg-desktop-portal-hyprland_latest || echo "dh-make: Ignoring Last Error"
 dpkg-buildpackage --no-sign
 
 # Move the debs to output
 cd ../
-sudo rm -rf aquamarine
+sudo rm -rf xdg-desktop-portal-hyprland
 cd ../
-mv ./aquamarine/*.deb ./
+mv ./xdg-desktop-portal-hyprland/*.deb ./
