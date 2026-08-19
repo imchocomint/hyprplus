@@ -7,9 +7,9 @@ sudo ./hyprwire/main.sh "$@"
 sudo ./hyprlang/main.sh "$@"
 sudo ./hyprgraphics/main.sh "$@"
 sudo ./aquamarine/main.sh "$@"
-sudo ./hyprland/main.sh "$@"
+sudo ./hyprcursor/main.sh "$@"
+sudo ./hyprtoolkit/main.sh "$@"
 sudo ./hyprland-guiutils/main.sh "$@"
-sudo ./hyprland-qtsupport/main.sh "$@"
+sudo ./hyprland/main.sh "$@"
 sudo ./xdg-desktop-portal-hyprland/main.sh "$@"
-sudo apt install libhyprtoolkit
 bash rename.sh

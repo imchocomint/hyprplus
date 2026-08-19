@@ -1,0 +1,34 @@
+Format: 1.8
+Date: Wed, 18 Jan 2023 21:48:14 +0000
+Source: hyprland-qt-support
+Binary: hyprland-qt-support hyprland-qt-support-dbgsym
+Architecture: source amd64
+Version: 0.1.0
+Distribution: unstable
+Urgency: medium
+Maintainer: imchocomint <tranthienminh2008@gmail.com>
+Changed-By: imchocomint <tranthienminh2008@gmail.com>
+Description:
+ hyprland-qt-support - hyprland qt support lib
+Changes:
+ hyprland-qt-support (0.1.0) unstable; urgency=medium
+ .
+   * Initial release.
+Checksums-Sha1:
+ f8de73c6ae49f5e14e33d83719dfb29b015c7a1a 767 hyprland-qt-support_0.1.0.dsc
+ ac7410be3a5aa120125755f03b41bf791911be54 13604 hyprland-qt-support_0.1.0.tar.xz
+ 9a10a5b0d7f1ddb6af618e21df634d046e66f6e6 1976020 hyprland-qt-support-dbgsym_0.1.0_amd64.deb
+ f88520b8754e3ad16ff454d3d6c26845a91f3a50 16137 hyprland-qt-support_0.1.0_amd64.buildinfo
+ 64ee27a5b4d27917e2abfc8e8d2849d55eff32e7 94304 hyprland-qt-support_0.1.0_amd64.deb
+Checksums-Sha256:
+ 134b73ed5b4534d206fb4bc7fd47db1d7961fb633b7218dec77f82b239659f73 767 hyprland-qt-support_0.1.0.dsc
+ 522e618094401a8c81fcd0af152d0e18e1f0018d7b7e1906f155a7985e90faf4 13604 hyprland-qt-support_0.1.0.tar.xz
+ a4269a1c40cc24e9fe3e39b18d9ca1b088d8e112731b4d2dd2938eb223ff5bc8 1976020 hyprland-qt-support-dbgsym_0.1.0_amd64.deb
+ 6ffb8a61ab1f13bb0c832ff14eb8f04168fa230ead1787fca7ad57ad84459908 16137 hyprland-qt-support_0.1.0_amd64.buildinfo
+ f7251ba6ee3266d6738c978e7d228b8ba40d1d5806e92af14d35b893a6e1d7d3 94304 hyprland-qt-support_0.1.0_amd64.deb
+Files:
+ 78c7f987933c4632229397ae4a49b039 767 admin optional hyprland-qt-support_0.1.0.dsc
+ a79db58fe978ce18fcd5e4ba5bdbfb81 13604 admin optional hyprland-qt-support_0.1.0.tar.xz
+ 211b6d28f2683bae5b54253b10d91201 1976020 debug optional hyprland-qt-support-dbgsym_0.1.0_amd64.deb
+ e7732cfb43c33e04ef6314648dd42f30 16137 admin optional hyprland-qt-support_0.1.0_amd64.buildinfo
+ 784822aede7ff1ead1d03ade19060dc1 94304 admin optional hyprland-qt-support_0.1.0_amd64.deb

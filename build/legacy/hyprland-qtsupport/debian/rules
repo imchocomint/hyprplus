@@ -1,0 +1,70 @@
+#! /usr/bin/make -f
+
+## See debhelper(7) (uncomment to enable).
+## Output every command that modifies files on the build system.
+export DH_VERBOSE = 1
+export PIKA_BUILD_ARCH = $(shell cat ../pika-build-arch)
+
+## === the chain of command ===
+## debuild runs a chain of dh functions in the following order:
+## dh_testdir
+## dh_clean
+## dh_auto_clean
+## dh_update_autotools_config
+## dh_autoreconf
+## dh_auto_configure
+## dh_prep
+## dh_build
+## dh_auto_build
+## dh_install
+## dh_auto_install
+## dh_installdocs
+## dh_installchangelogs
+## dh_perl
+## dh_link
+## dh_strip_nondeterminism
+## dh_compress
+## dh_fixperms
+## dh_missing
+## dh_dwz
+## dh_strip
+## dh_makeshlibs
+## dh_shlibdeps
+## dh_installdeb
+## dh_gencontrol
+## but you are most likely to only need to override the following:
+## dh_clean
+## dh_auto_configure
+## dh_build
+## dh_install
+
+## === End end of region ===
+
+## === overriding dh functions ===
+## by default all dh functions will run a specific command based on the build system selected by "dh $@"
+## if you have a makefile that does everything you need this is fine,
+## but most likely you have no MakeFile and you want to add your own commands
+## Note : overrides must be places above %:
+## So here's a few examples:
+
+## overriding dh_clean to make it not delete rust vendor files:
+#override_dh_clean:
+#	echo "disabled"
+
+## overriding dh_auto_configure to add custom configs:
+#override_dh_auto_configure:
+#		$(srcdir)/configure -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_DATADIR=/usr/share -DCMAKE_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu -DBUILD_PLUGIN=OFF
+
+## overriding dh_install to install files to a package:
+#override_dh_auto_configure:
+#		mkdir -p debian/pikman/usr/bin
+#		cp pikman debian/pikman/usr/bin/
+
+## === End end of region ===
+
+## This here will start the build:
+%:
+	dh $@ -S cmake
+
+override_dh_auto_configure:
+	dh_auto_configure -- -DINSTALL_QML_PREFIX=lib/$(DEB_HOST_MULTIARCH)/qt6/qml

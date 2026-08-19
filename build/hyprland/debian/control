@@ -80,7 +80,6 @@ Depends: fontconfig,
          libdisplay-info3,
          hyprwayland-scanner,
          libhyprcursor,
-         hyprland-qtutils,
          libhyprlang,
          libliftoff0,
 Provides: Hyprland, hyprctl
