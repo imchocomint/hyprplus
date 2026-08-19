@@ -28,12 +28,16 @@ All bugs should be reported in Issues. This is for minor inconvenience.
 
 ## Install
 ## One-script install (requires wget)
+Currently updating
+
+## Via hyst
+Clone the repo. Run:
+
 ```
-wget https://raw.githubusercontent.com/imchocomint/hyprplus/refs/heads/main/bootstrap.sh
-sudo bash ./bootstrap.sh
+cd hyperplus/hyst
+python main.py
 ```
 
-## Via hyst (currently updating)
 ## Manually
 
 ## Build
