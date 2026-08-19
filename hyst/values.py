@@ -1,32 +1,15 @@
 standard_pkgs = [
-    # "aquamarine-dbgsym-latest.deb"
     "aquamarine-latest.deb",
-    # "hyprcursor-util-dbgsym-latest.deb"
     "hyprcursor-util-latest.deb",
-    # "hyprland-dbgsym-latest.deb"
     "hyprland-latest.deb",
-    # "hyprland-qt-support-dbgsym-latest.deb"
-    "hyprland-qt-support-latest.deb"  ,  
-    # "hyprland-qtutils-dbgsym-latest.deb"
-    "hyprland-qtutils-latest.deb",
-    # "hyprwayland-scanner-dbgsym-latest.deb"
+    "hyprland-guiutils-latest.deb",
     "hyprwayland-scanner-latest.deb",
-    # "libaquamarine-dev-latest.deb"
-    # "libhyprcursor-dbgsym-latest.deb"
-    # "libhyprcursor-dev-latest.deb"
     "libhyprcursor-latest.deb",
-    # "libhyprgraphics-dbgsym-latest.deb"
-    # "libhyprgraphics-dev-latest.deb"
     "libhyprgraphics-latest.deb",
-    # "libhyprlang-dbgsym-latest.deb"
-    # "libhyprlang-dev-latest.deb"
     "libhyprlang-latest.deb",
-    # "libhyprutils-dbgsym-latest.deb"
-    # "libhyprutils-dev-latest.deb"
     "libhyprutils-latest.deb",
+    "libhyprtoolkit-latest.deb",
     "libhyprwayland-scanner-latest.deb",
-    # "xdg-desktop-portal-hyprland-dbgsym-latest.deb"
-    # "xdg-desktop-portal-hyprland-dev-latest.deb"
     "xdg-desktop-portal-hyprland-latest.deb"]
 
 dev_pkgs =[
@@ -35,21 +18,8 @@ dev_pkgs =[
     "libhyprgraphics-dev-latest.deb",
     "libhyprlang-dev-latest.deb",
     "libhyprutils-dev-latest.deb",
+    "libhyprtoolkit-dev-latest.deb",
     "xdg-desktop-portal-hyprland-dev-latest.deb",
-]
-
-dbgsym_pkgs = [
-    "aquamarine-dbgsym-latest.deb",
-    "hyprcursor-util-dbgsym-latest.deb",
-    "hyprland-dbgsym-latest.deb",
-    "hyprland-qt-support-dbgsym-latest.deb",
-    "hyprland-qtutils-dbgsym-latest.deb",
-    "hyprwayland-scanner-dbgsym-latest.deb",
-    "libhyprcursor-dbgsym-latest.deb",
-    "libhyprgraphics-dbgsym-latest.deb",
-    "libhyprlang-dbgsym-latest.deb",
-    "libhyprutils-dbgsym-latest.deb",
-    "xdg-desktop-portal-hyprland-dbgsym-latest.deb"
 ]
 
 hyprutils_packages=[
@@ -72,6 +42,9 @@ hyprlang_packages=[
 hyprgraphics_packages=[
     "libhyprgraphics-latest.deb"
 ]
+hyprtoolkit_packages=[
+    "libhyprtoolkit-latest.deb"
+]
 
 aquamarine_packages=[
     "aquamarine-latest.deb"
@@ -83,7 +56,7 @@ hyprwayland_scanner_packages=[
 ]
 
 hyprland_qtutils_packages=[
-    "hyprland-qtutils-latest.deb"
+    "hyprland-guiutils-latest.deb"
 ]
 
 hyprland_qtsupport_packages=[
