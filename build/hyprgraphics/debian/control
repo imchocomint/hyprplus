@@ -8,14 +8,14 @@ Build-Depends: debhelper-compat (= 13),
                cmake-extras,
                cmake,
                libpixman-1-dev,
-               libjxl-dev,
                libmagic-dev,
                libcairo2-dev,
                libpixman-1-dev,
                libwebp-dev,
                libjpeg-dev,
                libspng-dev,
-               librsvg,
+               librsvg2-bin,
+               libjxl-dev,
 Rules-Requires-Root: no
 
 Package: libhyprgraphics

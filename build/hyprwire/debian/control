@@ -15,7 +15,7 @@ Architecture: linux-any
 Depends:
          ${shlibs:Depends},
          ${misc:Depends},
-         libhyprutils10
+         libhyprutils
 Provides: hyprwire (= ${binary:Version})
 Description: The Hypr wire protocol library
 
