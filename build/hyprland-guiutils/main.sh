@@ -43,6 +43,6 @@ dpkg-buildpackage --no-sign
 
 # Move the debs to output
 cd ../
-sudo rm -rf hyprland-guiutils
+rm -rf hyprland-guiutils
 cd ../
 mv ./hyprland-guiutils/*.deb ./
