@@ -43,6 +43,6 @@ dpkg-buildpackage --no-sign
 
 # Move the debs to output
 cd ../
-sudo rm -rf xdg-desktop-portal-hyprland
+rm -rf xdg-desktop-portal-hyprland
 cd ../
 mv ./xdg-desktop-portal-hyprland/*.deb ./
