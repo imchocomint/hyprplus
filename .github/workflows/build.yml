@@ -33,7 +33,8 @@ jobs:
             cmake \
             meson \
             ninja-build \
-            pkg-config
+            pkg-config \
+            dh-make
 
       - name: Build the packages
         run: |
