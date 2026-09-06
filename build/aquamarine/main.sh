@@ -42,6 +42,6 @@ dpkg-buildpackage --no-sign
 
 # Move the debs to output
 cd ../
-sudo rm -rf aquamarine
+rm -rf aquamarine
 cd ../
 mv ./aquamarine/*.deb ./
