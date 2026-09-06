@@ -43,6 +43,6 @@ dpkg-buildpackage --no-sign
 
 # Move the debs to output
 cd ../
-sudo rm -rf hyprwire
+rm -rf hyprwire
 cd ../
 mv ./hyprwire/*.deb ./
