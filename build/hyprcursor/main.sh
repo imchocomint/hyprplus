@@ -43,6 +43,6 @@ dpkg-buildpackage --no-sign
 
 # Move the debs to output
 cd ../
-sudo rm -rf hyprcursor
+rm -rf hyprcursor
 cd ../
 mv ./hyprcursor/*.deb ./
