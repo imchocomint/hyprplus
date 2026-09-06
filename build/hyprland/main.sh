@@ -43,6 +43,6 @@ dpkg-buildpackage --no-sign
 
 # Move the debs to output
 cd ../
-sudo rm -rf hyprland
+rm -rf hyprland
 cd ../
 mv ./hyprland/*.deb ./
