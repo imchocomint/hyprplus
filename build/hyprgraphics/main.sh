@@ -42,6 +42,6 @@ dpkg-buildpackage --no-sign
 
 # Move the debs to output
 cd ../
-sudo rm -rf hyprgraphics
+rm -rf hyprgraphics
 cd ../
 mv ./hyprgraphics/*.deb ./
