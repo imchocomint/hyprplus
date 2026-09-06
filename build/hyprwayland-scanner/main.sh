@@ -43,6 +43,6 @@ dpkg-buildpackage --no-sign
 
 # Move the debs to output
 cd ../
-sudo rm -rf hyprwayland-scanner
+rm -rf hyprwayland-scanner
 cd ../
 mv ./hyprwayland-scanner/*.deb ./
